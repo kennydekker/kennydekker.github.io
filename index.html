@@ -33,33 +33,33 @@
     }
 .intro-section {
   display: flex;
-  align-items: center; /* Vertically align image and text */
-  justify-content: center; /* Horizontally center everything */
-  margin: 100px auto; /* Center the section on the page */
-  max-width: 700px; /* Limit width for proper centering */
-  text-align: center; /* Ensure text aligns properly */
-  gap: 20px; /* Space between image and text */
+  align-items: center; /* Align image and text vertically */
+  justify-content: center; /* Center the section horizontally */
+  margin: 0 auto; /* Remove unwanted spacing and center the section */
+  max-width: 800px; /* Restrict the width of the section */
+  text-align: left; /* Align the text inside the container */
+  gap: 20px; /* Space between the image and text */
 }
 .intro-section img {
-  width: 80px; /* Image size */
+  width: 80px; /* Resize the image */
   height: 80px;
-  border-radius: 50%; /* Circular image */
+  border-radius: 50%; /* Circular photo */
 }
 .intro-section div {
   display: flex;
-  flex-direction: column; /* Stack heading and summary */
-  align-items: center; /* Center text inside this block */
-  text-align: center; /* Ensure alignment within the div */
+  flex-direction: column; /* Stack the heading and summary */
+  align-items: flex-start; /* Align text to the left */
+  width: 100%; /* Ensure the text block fills the available space */
 }
 .intro-section h1 {
   font-size: 2em; /* Adjust heading size */
-  margin: 0; /* No extra margin above or below */
+  margin: 0; /* Remove extra margin */
 }
 .intro-section p {
-  font-size: 1em; /* Adjust summary text size */
-  margin: 10px 0 0 0; /* Add space above the summary, no additional margins */
-  max-width: 500px; /* Limit width for readability */
-  text-align: center; /* Center the summary below the heading */
+  font-size: 1em; /* Adjust paragraph size */
+  margin: 10px 0 0; /* Space between heading and paragraph */
+  max-width: 600px; /* Limit the paragraph width */
+  text-align: left; /* Ensure proper text alignment */
 }
     button {
       font-size: 1em;
