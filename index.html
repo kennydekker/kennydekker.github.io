@@ -108,38 +108,39 @@
 
 /* Projects Section Styling */
 .projects-section {
-  padding: 50px 20px;
-  background: #121212; /* Dark background for professionalism */
+  padding: 70px 40px; /* Increased padding for a more spacious layout */
+  background: #121212; /* Professional dark background */
   color: white;
   text-align: center;
 }
 
 .projects-title {
   font-family: 'Poppins', sans-serif;
-  font-size: 2.5em;
-  letter-spacing: 1.5px;
-  margin-bottom: 30px;
+  font-size: 3em; /* Larger title font size */
+  letter-spacing: 2px; /* More spacing for emphasis */
+  margin-bottom: 50px; /* Increase space below the title */
 }
 
 /* Individual Box Styling */
 .box {
   display: flex;
   align-items: center;
-  margin: 20px auto;
-  padding: 20px;
-  background: #222; /* Dark gray background */
-  border-radius: 10px;
-  width: 70%;
+  margin: 30px auto; /* Increased spacing between boxes */
+  padding: 40px; /* Larger padding for a roomier box */
+  background: #222; /* Dark gray for premium feel */
+  border-radius: 15px; /* More rounded corners */
+  width: 85%; /* Increased width */
   color: white;
   text-decoration: none;
   transition: background 0.3s, transform 0.3s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
 }
 
 .box img {
-  width: 150px; /* Consistent size for photos */
+  width: 200px; /* Larger image size for better visibility */
   height: auto;
   border-radius: 50%; /* Circular client photo */
-  margin: 0 20px;
+  margin: 0 30px; /* More space between image and text */
 }
 
 /* Left-aligned photo */
@@ -148,13 +149,13 @@
 }
 
 /* Right-aligned photo */
-.box:nth-child() {
+.box:nth-child(odd) {
   flex-direction: row-reverse;
 }
 
 .box:hover {
-  background: #333; /* Lighter background on hover */
-  transform: scale(1.03); /* Slight growth effect */
+  background: #333; /* Slightly lighter gray on hover */
+  transform: scale(1.05); /* Enhanced growth effect */
 }
 /* Footer Styles */
 footer {
