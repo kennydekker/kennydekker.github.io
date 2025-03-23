@@ -64,42 +64,41 @@
   margin: 0;
 }
 
+/* Heading and Image */
 .intro-heading {
   display: flex;
-  align-items: center; /* Align image and heading vertically */
-  justify-content: flex-start; /* Align items to the left */
-  gap: 20px; /* Space between the image and heading */
+  align-items: center; /* Align the image and heading vertically */
+  justify-content: flex-start; /* Keep alignment to the left */
+  gap: 20px; /* Space between image and heading */
 }
 
 .intro-heading img {
-  width: 80px; /* Size of the image */
+  width: 80px;
   height: 80px;
   border-radius: 50%; /* Circular image */
 }
 
 .intro-heading h1 {
-  font-size: 2em; /* Adjust heading size */
-  margin: 0; /* Remove default margin */
+  font-size: 2em;
+  margin: 0; /* Remove unnecessary margins */
 }
 
-.intro-content {
-  display: flex;
-  flex-direction: column; /* Stack summary and button vertically */
-  align-items: center; /* Center-align content */
-  margin-top: 20px; /* Add spacing above the summary */
+/* Summary and Button */
+.intro-summary {
+  margin-top: 20px; /* Add space between heading and summary */
+  text-align: center; /* Center-align the summary and button */
 }
 
-.intro-content p {
-  font-size: 1em; /* Adjust paragraph size */
-  max-width: 500px; /* Constrain width of the summary */
-  text-align: center; /* Center-align the summary text */
+.intro-summary p {
+  font-size: 1em;
+  max-width: 500px; /* Restrict width of the summary */
+  margin: 0 auto 20px auto; /* Center the paragraph with spacing below */
   line-height: 1.5; /* Improve readability */
 }
 
 button {
   font-size: 1em;
   padding: 10px 20px;
-  margin-top: 20px;
   background-color: white;
   color: black;
   border: 1px solid black;
@@ -232,14 +231,14 @@ button:hover {
   <!-- Intro Section -->
 <div class="intro-wrapper">
   <div class="intro-section">
-    <!-- Heading and Image -->
+    <!-- Image and Heading -->
     <div class="intro-heading">
       <img src="Kenny.jpg" alt="Professional Photo">
       <h1>Hi! I'm <span style="color: blue;">Kenny Dekker</span>!</h1>
     </div>
 
     <!-- Summary and Button -->
-    <div class="intro-content">
+    <div class="intro-summary">
       <p>I'm a professional software developer with over five years of experience in designing, developing, and optimizing websites for businesses of all sizes. I specialize in creating user-focused, responsive, and visually stunning websites that deliver measurable results.</p>
       <button onclick="showForm()">Contact Me</button>
     </div>
