@@ -67,56 +67,59 @@
 /* Heading and Image */
 /* Wrapper for the entire intro section */
 /* Wrapper: centers all content */
-.intro-wrapper {
-  max-width: 800px; /* Restrict overall width */
-  margin: 150px auto; /* Center vertically and horizontally */
-  padding: 0 20px; /* Add padding for responsiveness */
-  text-align: center; /* Center-align summary and button */
-}
+    .intro-wrapper {
+      display: flex;
+      flex-direction: column; /* Stack elements vertically */
+      align-items: center; /* Center content horizontally */
+      margin: 150px auto; /* Add spacing from the top */
+      max-width: 800px; /* Limit the width of the section */
+      padding: 0 20px; /* Add responsive padding */
+    }
 
-/* Align image and heading */
-.intro-heading {
-  display: flex;
-  align-items: center; /* Vertically align image and heading */
-  justify-content: center; /* Center content as a block */
-  gap: 20px; /* Add space between image and heading */
-  margin-bottom: 20px; /* Space between heading and summary */
-}
+    .intro-section {
+      display: flex;
+      flex-direction: column; /* Stack heading and summary vertically */
+      gap: 20px; /* Add space between elements */
+      text-align: left; /* Keep text aligned to the left */
+      align-items: center; /* Center horizontally */
+    }
 
-.intro-heading img {
-  width: 80px; /* Control the size of the image */
-  height: 80px;
-  border-radius: 50%; /* Circular image */
-}
+    .intro-heading {
+      display: flex;
+      align-items: center; /* Vertically align image and text */
+      gap: 20px; /* Add space between the image and heading */
+    }
 
-.intro-heading h1 {
-  font-size: 2em; /* Adjust heading size */
-  margin: 0; /* Remove unnecessary spacing */
-  text-align: left; /* Keep the heading aligned properly */
-}
+    .intro-heading img {
+      width: 80px; /* Control the size of the image */
+      height: 80px;
+      border-radius: 50%; /* Circular image */
+    }
 
-/* Summary */
-.intro-summary {
-  max-width: 500px; /* Constrain width of summary text */
-  margin: 0 auto 20px auto; /* Center the summary */
-  line-height: 1.5; /* Add space between lines */
-  text-align: left; /* Align the text naturally */
-}
+    .intro-heading h1 {
+      font-size: 2em; /* Adjust heading size */
+      margin: 0; /* Remove unnecessary spacing */
+    }
 
-/* Button */
-.contact-button {
-  font-size: 1em;
-  padding: 10px 20px;
-  background-color: white; /* Clean, white button */
-  color: black;
-  border: 1px solid black;
-  border-radius: 5px;
-  cursor: pointer;
-}
+    .intro-summary {
+      max-width: 500px; /* Constrain width of summary text */
+      line-height: 1.5; /* Add space between lines */
+      text-align: center; /* Center the summary */
+    }
 
-.contact-button:hover {
-  background-color: lightgray; /* Subtle hover effect */
-}
+    .contact-button {
+      font-size: 1em;
+      padding: 10px 20px;
+      background-color: white; /* Clean, white button */
+      color: black;
+      border: 1px solid black;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .contact-button:hover {
+      background-color: lightgray; /* Subtle hover effect */
+    }
     
     #contact-form {
       display: none;
@@ -240,18 +243,21 @@
 <div class="intro-wrapper">
   <div class="intro-section">
     <!-- Image and Heading -->
-    <div class="intro-heading">
-      <img src="Kenny.jpg" alt="Professional Photo">
-      <h1>Hi! I'm <span style="color: blue;">Kenny Dekker</span>!</h1>
-    </div>
+  <div class="intro-wrapper">
+    <div class="intro-section">
+      <!-- Image and Heading -->
+      <div class="intro-heading">
+        <img src="Kenny.jpg" alt="Professional Photo">
+        <h1>Hi! I'm <span style="color: blue;">Kenny Dekker</span>!</h1>
+      </div>
 
-    <!-- Summary and Button -->
-    <div class="intro-summary">
-      <p>I'm a professional software developer with over five years of experience in designing, developing, and optimizing websites for businesses of all sizes. I specialize in creating user-focused, responsive, and visually stunning websites that deliver measurable results.</p>
-      <button onclick="showForm()">Contact Me</button>
+      <!-- Summary -->
+      <div class="intro-summary">
+        <p>I'm a professional software developer with over five years of experience in designing, developing, and optimizing websites for businesses of all sizes. I specialize in creating user-focused, responsive, and visually stunning websites that deliver measurable results.</p>
+        <button onclick="showForm()">Contact Me</button>
+      </div>
     </div>
   </div>
-</div>
   
   <!-- Contact Form -->
   <div id="contact-form">
