@@ -83,12 +83,26 @@
   max-width: 600px; /* Keep the paragraph constrained */
   text-align: left; /* Ensure proper alignment */
 }
-    button {
-      font-size: 1em;
-      padding: 10px 20px;
-      margin-top: 20px;
-      cursor: pointer;
-    }
+.button-wrapper {
+  display: flex;
+  justify-content: center; /* Center the button horizontally */
+  margin-top: 20px; /* Add space above the button */
+}
+
+button {
+  font-size: 1em;
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: white; /* White button background */
+  color: black; /* Black text for contrast */
+  border: 1px solid black; /* Add a border for definition */
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: lightgray; /* Slightly darker white on hover */
+}
     
     #contact-form {
       display: none;
@@ -215,7 +229,9 @@
     <div>
       <h1>Hi! I'm <span style="color: blue;">Kenny Dekker</span>!</h1>
       <p>I'm a professional software developer with over five years of experience in designing, developing, and optimizing websites for businesses of all sizes. I specialize in creating user-focused, responsive, and visually stunning websites that deliver measurable results.</p>
-      <button onclick="showForm()">Contact Me</button>
+      <div class="button-wrapper">
+        <button onclick="showForm()">Contact Me</button>
+      </div>
     </div>
   </div>
 </div>
