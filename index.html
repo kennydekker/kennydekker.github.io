@@ -31,35 +31,47 @@
     .hotbar a:hover {
       background-color: #555; /* Slightly lighter on hover */
     }
+.intro-wrapper {
+  display: flex;
+  justify-content: center; /* Center the entire intro-wrapper horizontally */
+  align-items: center; /* Center content vertically if needed */
+  margin: 0 auto; /* Center the wrapper on the page */
+  max-width: 100%; /* Ensure it spans the page width */
+  padding: 0 20px; /* Add some padding for responsiveness */
+  text-align: center; /* Ensure all child content aligns in the center */
+}
+
 .intro-section {
   display: flex;
-  align-items: center; /* Align image and text vertically */
-  justify-content: center; /* Center the section horizontally */
-  margin: 0 auto; /* Remove unwanted spacing and center the section */
-  max-width: 800px; /* Restrict the width of the section */
-  text-align: left; /* Align the text inside the container */
-  gap: 20px; /* Space between the image and text */
+  align-items: center; /* Vertically align the image and text */
+  justify-content: center; /* Center everything horizontally */
+  flex-wrap: nowrap; /* Prevent wrapping inside the section */
+  max-width: 800px; /* Restrict width of the section */
+  gap: 20px; /* Add spacing between the image and text */
 }
+
 .intro-section img {
-  width: 80px; /* Resize the image */
+  width: 80px; /* Size the photo */
   height: 80px;
   border-radius: 50%; /* Circular photo */
 }
+
 .intro-section div {
   display: flex;
-  flex-direction: column; /* Stack the heading and summary */
-  align-items: flex-start; /* Align text to the left */
-  width: 100%; /* Ensure the text block fills the available space */
+  flex-direction: column; /* Stack heading and summary */
+  align-items: flex-start; /* Align text left */
+  max-width: 600px; /* Restrict text width */
 }
+
 .intro-section h1 {
-  font-size: 2em; /* Adjust heading size */
-  margin: 0; /* Remove extra margin */
+  font-size: 2em; /* Adjust font size */
+  margin: 0; /* Remove unnecessary spacing */
 }
+
 .intro-section p {
   font-size: 1em; /* Adjust paragraph size */
-  margin: 10px 0 0; /* Space between heading and paragraph */
-  max-width: 600px; /* Limit the paragraph width */
-  text-align: left; /* Ensure proper text alignment */
+  margin: 10px 0 0 0; /* Add space between heading and summary */
+  text-align: left; /* Ensure proper alignment */
 }
     button {
       font-size: 1em;
@@ -186,12 +198,15 @@
 
 
   <!-- Intro Section -->
+<div class="intro-wrapper">
   <div class="intro-section">
     <img src="Kenny.jpg" alt="Professional Photo">
-    <h1>Hi! I'm <span style="color: blue;">Kenny Dekker</span>!</h1>
+    <div>
+      <h1>Hi! I'm <span style="color: blue;">Kenny Dekker</span>!</h1>
+      <p>I'm a professional software developer with over five years of experience in designing, developing, and optimizing websites for businesses of all sizes. I specialize in creating user-focused, responsive, and visually stunning websites that deliver measurable results.</p>
+    </div>
   </div>
-<p>I'm a professional software developer with over five years of experience in designing, developing, and optimizing websites for businesses of all sizes. I specialize in creating user-focused, responsive, and visually stunning websites that deliver measurable results.</p>
-  <button onclick="showForm()">Contact me</button>
+</div>
 
   <!-- Contact Form -->
   <div id="contact-form">
