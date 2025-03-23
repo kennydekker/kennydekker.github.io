@@ -106,79 +106,56 @@
       margin-top: 10px;
     }
 
-    .projects-title {
-      font-size: 2.5em;
-      margin-bottom: 30px;
-      color: white; /* White font for readability */
-    }
+/* Projects Section Styling */
+.projects-section {
+  padding: 50px 20px;
+  background: #121212; /* Dark background for professionalism */
+  color: white;
+  text-align: center;
+}
 
-    .projects-section {
-      background: black; /* Black background */
-      padding: 40px 0; /* Add some padding for visual appeal */
-    }
+.projects-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5em;
+  letter-spacing: 1.5px;
+  margin-bottom: 30px;
+}
 
-    .box {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 20px auto;
-      padding: 20px;
-      background: #444; /* Dark gray box for contrast */
-      border-radius: 50px; /* Oval shape */
-      width: 70%;
-      text-decoration: none; /* Removes underline */
-      color: white; /* White text color */
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    }
+/* Individual Box Styling */
+.box {
+  display: flex;
+  align-items: center;
+  margin: 20px auto;
+  padding: 20px;
+  background: #222; /* Dark gray background */
+  border-radius: 10px;
+  width: 70%;
+  color: white;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.3s;
+}
 
-    .box img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%; /* Circular client image */
-      margin: 0 20px;
-    }
+.box img {
+  width: 150px; /* Consistent size for photos */
+  height: auto;
+  border-radius: 50%; /* Circular client photo */
+  margin: 0 20px;
+}
 
-    .box:nth-child(even) {
-      flex-direction: row; /* Picture left, quote right */
-    }
+/* Left-aligned photo */
+.box:nth-child(even) {
+  flex-direction: row;
+}
 
-    .box:nth-child(odd) {
-      flex-direction: row-reverse; /* Picture right, quote left */
-    }
+/* Right-aligned photo */
+.box:nth-child() {
+  flex-direction: row-reverse;
+}
 
-    .box:hover {
-      background: #555; /* Slightly lighter gray on hover */
-    }
-
-    .spacer {
-      height: 50px;
-      width: 100%;
-    }
-
-    .featured-title {
-      font-size: 2.5em;
-      margin-bottom: 30px;
-      color: #333;
-    }
-
-    .featured-article {
-      display: block; /* Makes the entire area clickable */
-      margin: 20px auto;
-      padding: 15px;
-      text-align: left;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      max-width: 800px;
-      background: white; /* Ensures visible clickable area */
-      text-decoration: none; /* Removes underline */
-      color: inherit; /* Inherits text color */
-    }
-
-    .featured-article:hover {
-      background: #f0f0f0; /* Adds highlight on hover */
-    }
-
+.box:hover {
+  background: #333; /* Lighter background on hover */
+  transform: scale(1.03); /* Slight growth effect */
+}
 /* Footer Styles */
 footer {
   position: relative; /* Ensures the footer stays at the bottom */
@@ -244,29 +221,28 @@ footer {
     </form>
   </div>
 
-  <!-- Projects Section -->
-  <div class="projects-section">
-    <h1 class="projects-title">Projects I Love</h1>
+<!-- Projects Section -->
+<!-- Projects Section -->
+<div class="projects-section">
+  <h1 class="projects-title">Projects I Love</h1>
 
-    <!-- Box 1 -->
-    <a href="https://redirect-link1.com" target="_blank" class="box">
-      <img src="client1.jpg" alt="Client 1">
-      <p>"Kenny revamped our e-commerce website, and our sales increased by 40%. His design and functionality changes were brilliant!"</p>
-    </a>
+  <!-- Individual Project Boxes -->
+  <a href="https://redirect-link1.com" target="_blank" class="box">
+    <img src="client1.jpg" alt="Client 1">
+    <p>"Kenny revamped our e-commerce website, and our sales increased by 40%. His design and functionality changes were brilliant!"</p>
+  </a>
 
-    <!-- Box 2 -->
-    <a href="https://redirect-link2.com" target="_blank" class="box">
-      <img src="client2.jpg" alt="Client 2">
-      <p>"Working with Kenny was an absolute pleasure. He built us a modern, user-friendly website that our clients love!"</p>
-    </a>
+  <a href="https://redirect-link2.com" target="_blank" class="box">
+    <p>"Working with Kenny was an absolute pleasure. He built us a modern, user-friendly website that our clients love!"</p>
+    <img src="client2.jpg" alt="Client 2">
+  </a>
 
-    <!-- Box 3 -->
-    <a href="https://redirect-link3.com" target="_blank" class="box">
-      <img src="client3.jpg"
-            alt="Client 3">
-      <p>"Kenny transformed our outdated site into a sleek, mobile-friendly experience. Couldn’t be happier with the results."</p>
-    </a>
-  </div>
+  <a href="https://redirect-link3.com" target="_blank" class="box">
+    <img src="client3.jpg" alt="Client 3">
+    <p>"Kenny transformed our outdated site into a sleek, mobile-friendly experience. Couldn’t be happier with the results."</p>
+  </a>
+</div>
+
   <!-- Invisible Section -->
   <div class="spacer"></div>
 <!-- Featured Work Section -->
@@ -312,13 +288,18 @@ AOS.init();
 
   <!-- Invisible Section -->
   <div class="spacer"></div>
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Kenny Dekker. All Rights Reserved.</p>
-    <a href="https://www.patreon.com/" target="_blank" class="support-link">
-      <span>🔥</span>Support my work
-    </a>
-  </footer>
+  <div class="container">
+    <!-- Main content -->
+    <div class="content">
+      <!-- Everything above the footer -->
+    </div>
+    <footer>
+      <p>&copy; 2025 Kenny Dekker. All Rights Reserved.</p>
+      <a href="https://www.patreon.com/" target="_blank" class="support-link">
+        <span>🔥</span>Support my work
+      </a>
+    </footer>
+  </div>
   <script>
     function showForm() {
       document.getElementById('contact-form').style.display = 'block';
