@@ -45,34 +45,25 @@
     }
 
     .intro-section {
-      display: flex;
-      flex-direction: column; /* Stack heading and summary vertically */
-      gap: 20px; /* Add space between elements */
-      align-items: center; /* Center horizontally */
+        display: flex;
+        align-items: flex-start; /* Align image with the header */
+        gap: 20px; /* Add spacing between the image and text */
+        
     }
-
-    .intro-heading {
-      display: flex;
-      align-items: center; /* Vertically align image and text */
-      gap: 20px; /* Add space between the image and heading */
-      justify-content: center;
+    .intro-section img {
+        align-self: flex-start; /* Keep the image aligned to the top */
+        
     }
-
-    .intro-heading img {
-      width: 80px; /* Control the size of the image */
-      height: 80px;
-      border-radius: 50%; /* Circular image */
-    }
-
-    .intro-heading h1 {
-      font-size: 2em; /* Adjust heading size */
-      margin: 0; /* Remove unnecessary spacing */
-    }
-
     .intro-summary {
+      display: flex;
+      flex-direction: column; /* Stack summary text and button */
+      align-items: center; /* Center align text and button */
       max-width: 500px; /* Constrain width of summary text */
       line-height: 1.5; /* Add space between lines */
-      text-align: center; /* Center the summary */
+    }
+
+    .intro-summary p {
+      text-align: left; /* Align the text to the left */
     }
 
     .contact-button {
@@ -83,6 +74,7 @@
       border: 1px solid black;
       border-radius: 5px;
       cursor: pointer;
+      margin-top: 10px; /* Add spacing above the button */
     }
 
     .contact-button:hover {
@@ -223,16 +215,11 @@
   <!-- Intro Section -->
   <div class="intro-wrapper">
     <div class="intro-section">
-      <!-- Image and Heading -->
-      <div class="intro-heading">
-        <img src="Kenny.jpg" alt="Professional Photo">
-        <h1>Hi! I'm <span style="color: blue;">Kenny Dekker</span>!</h1>
-      </div>
-
-      <!-- Summary -->
+      <img src="Kenny.jpg" alt="Professional Photo">
       <div class="intro-summary">
+        <h1>Hi! I'm <span style="color: blue;">Kenny Dekker</span>!</h1>
         <p>I'm a professional software developer with over five years of experience in designing, developing, and optimizing websites for businesses of all sizes. I specialize in creating user-focused, responsive, and visually stunning websites that deliver measurable results.</p>
-        <button onclick="showForm()">Contact Me</button>
+        <button class="contact-button" onclick="showForm()">Contact Me</button>
       </div>
     </div>
   </div>
@@ -308,3 +295,4 @@
   </script>
 </body>
 </html>
+
