@@ -203,6 +203,8 @@
       margin-right: 5px; /* Space between the symbol and text */
     }
   </style>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
 </head>
 <body>
   <!-- Hotbar Navigation -->
@@ -212,17 +214,17 @@
     <a href="#projects">My Projects</a>
   </div>
 
-  <!-- Intro Section -->
-  <div class="intro-wrapper">
-    <div class="intro-section">
-      <img src="Kenny.jpg" alt="Professional Photo">
-      <div class="intro-summary">
-        <h1>Hi! I'm <span style="color: blue;">Kenny Dekker</span>!</h1>
-        <p>I'm a professional software developer with over five years of experience in designing, developing, and optimizing websites for businesses of all sizes. I specialize in creating user-focused, responsive, and visually stunning websites that deliver measurable results.</p>
-        <button class="contact-button" onclick="showForm()">Contact Me</button>
-      </div>
+<!-- Intro Section -->
+<div class="intro-wrapper">
+  <div class="intro-section">
+    <img src="Kenny.jpg" alt="Professional Photo" style="width: 150px; height: auto; border-radius: 10px; margin-right: 20px;">
+    <div class="intro-summary">
+      <h1 style="font-size: 2.5em; color: black; margin-bottom: 20px;">Hi! I'm <span style="color: blue;">Kenny Dekker</span>!</h1>
+      <p style="font-size: 1.2em; color: black;">I'm a professional software developer with over five years of experience in designing, developing, and optimizing websites for businesses of all sizes. I specialize in creating user-focused, responsive, and visually stunning websites that deliver measurable results.</p>
+      <button class="contact-button" onclick="showForm()">Contact Me</button>
     </div>
   </div>
+</div>
 
   <!-- Contact Form -->
   <div id="contact-form">
@@ -262,20 +264,47 @@
   </div>
   <!-- Invisible Section -->
   <div class="spacer"></div>
-  <!-- Featured Work Section -->
-  <h1 class="featured-title">Featured Work</h1>
-  <a href="#" target="_blank" class="featured-article">
-    <strong>E-Commerce Redesign</strong>
-    <p>A complete overhaul of a large online retailer's website, focusing on usability, performance, and conversion optimization.</p>
-  </a>
-  <a href="#" target="_blank" class="featured-article">
-    <strong>Portfolio Site Creation</strong>
-    <p>Developed a portfolio platform for creatives to showcase their work with interactive galleries and seamless navigation.</p>
-  </a>
-  <a href="#" target="_blank" class="featured-article">
-    <strong>Responsive Redesign for Local Businesses</strong>
-    <p>Helped several small businesses adopt responsive, mobile-first websites to improve customer engagement and accessibility.</p>
-  </a>
+<!-- Featured Work Section -->
+<div class="projects-section" style="background: white; color: black; padding: 40px 0;">
+  <h1 class="featured-title" style="color: black; font-size: 2.5em; margin-bottom: 30px;">Featured Work</h1>
+
+  <!-- Responsive Grid -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+    
+    <!-- Card 1 -->
+    <div class="featured-article p-6 bg-white border border-gray-300 rounded-lg shadow-md transform transition hover:scale-105 hover:shadow-lg">
+      <img src="ecommerce.jpg" alt="E-Commerce Redesign" class="w-full h-48 object-cover rounded-t-md">
+      <h2 class="text-xl font-bold mt-4" style="color: black;">E-Commerce Redesign</h2>
+      <p class="text-gray-600" style="color: black;">A complete overhaul of a large online retailer's website, focusing on usability, performance, and conversion optimization.</p>
+      <p class="mt-2 text-sm font-semibold text-green-500">Impact: +40% Conversion Rate</p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="featured-article p-6 bg-white border border-gray-300 rounded-lg shadow-md transform transition hover:scale-105 hover:shadow-lg">
+      <img src="portfolio.jpg" alt="Portfolio Site Creation" class="w-full h-48 object-cover rounded-t-md">
+      <h2 class="text-xl font-bold mt-4" style="color: black;">Portfolio Site Creation</h2>
+      <p class="text-gray-600" style="color: black;">Developed a portfolio platform for creatives to showcase their work with interactive galleries and seamless navigation.</p>
+      <p class="mt-2 text-sm font-semibold text-green-500">Featured in: Star Tribune</p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="featured-article p-6 bg-white border border-gray-300 rounded-lg shadow-md transform transition hover:scale-105 hover:shadow-lg">
+      <img src="responsive.jpg" alt="Responsive Redesign" class="w-full h-48 object-cover rounded-t-md">
+      <h2 class="text-xl font-bold mt-4" style="color: black;">Responsive Redesign</h2>
+      <p class="text-gray-600" style="color: black;">Helped several small businesses adopt responsive, mobile-first websites to improve customer engagement and accessibility.</p>
+      <p class="mt-2 text-sm font-semibold text-green-500">Enhanced: Mobile Engagement</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- AOS Initialization --> 
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js">
+</script> 
+<script> 
+AOS.init(); 
+</script>
+
   <!-- Invisible Section -->
   <div class="spacer"></div>
   <!-- Footer -->
@@ -295,4 +324,3 @@
   </script>
 </body>
 </html>
-
