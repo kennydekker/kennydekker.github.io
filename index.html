@@ -33,28 +33,30 @@
     }
 .intro-section {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: center; /* Vertically align the photo and heading */
+  justify-content: center; /* Center the entire section on the page */
   margin-top: 100px;
-  max-width: 600px; /* Restrict the width */
-  margin-left: auto; /* Center horizontally */
+  max-width: 800px; /* Restrict the width */
+  margin-left: auto;
   margin-right: auto;
-  text-align: left; /* Align text to the left */
+  text-align: left; /* Text stays aligned left inside the section */
+  gap: 20px; /* Add spacing between the image and text */
 }
 .intro-section img {
-  width: 80px; /* Smaller image size */
+  width: 80px; /* Smaller photo size */
   height: 80px;
   border-radius: 50%; /* Circular photo */
-  margin-right: 20px; /* Space between the photo and the text */
 }
 .intro-section h1 {
-  font-size: 2em; /* Reduce font size */
-  margin: 10px 0; /* Add spacing */
+  font-size: 2em; /* Adjust font size */
+  margin: 0; /* Remove extra space */
 }
-p {
-  font-size: 1em; /* Reduce paragraph text size */
-  max-width: 500px; /* Limit paragraph width */
-  margin: 0; /* Remove extra margin */
+.intro-section p {
+  font-size: 1em; /* Adjust summary size */
+  margin-top: 10px; /* Add space between the heading and summary */
+  max-width: 600px; /* Keep the text constrained for better readability */
+  margin-left: 0; /* Ensure no extra left alignment issues */
+  margin-right: 0; /* Ensure no extra right alignment issues */
 }
     button {
       font-size: 1em;
