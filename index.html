@@ -34,34 +34,30 @@
 .intro-section {
   display: flex;
   align-items: center; /* Align photo and text vertically */
-  justify-content: center; /* Center the section horizontally */
-  flex-wrap: wrap; /* Allow the content to wrap if necessary */
-  margin-top: 100px;
-  max-width: 800px; /* Restrict the width */
-  margin-left: auto;
-  margin-right: auto;
-  text-align: left; /* Keep the text properly aligned */
-  gap: 20px; /* Space between the image and text */
+  justify-content: center; /* Center horizontally */
+  margin: 100px auto; /* Center the section on the page */
+  max-width: 800px; /* Restrict width for better alignment */
+  text-align: left;
 }
 .intro-section img {
-  width: 80px; /* Smaller image size */
+  width: 80px; /* Resize the photo */
   height: 80px;
   border-radius: 50%; /* Circular photo */
 }
 .intro-section div {
   display: flex;
   flex-direction: column; /* Stack heading and summary */
-  align-items: flex-start; /* Keep text left-aligned within its container */
+  align-items: flex-start; /* Align text properly */
 }
 .intro-section h1 {
-  font-size: 2em; /* Adjust font size */
+  font-size: 2em; /* Adjust heading size */
   margin: 0; /* Remove extra spacing */
 }
 .intro-section p {
-  font-size: 1em; /* Standardize text size */
-  max-width: 600px; /* Restrict paragraph width for readability */
-  margin: 10px 0 0 0; /* Add spacing between heading and summary */
-  text-align: left; /* Keep paragraph aligned with heading */
+  font-size: 1em; /* Adjust summary text size */
+  margin-top: 10px; /* Add spacing below heading */
+  max-width: 600px; /* Constrain paragraph width */
+  text-align: left; /* Keep summary aligned properly */
 }
     button {
       font-size: 1em;
