@@ -171,13 +171,14 @@ footer {
   color: white; /* White text */
   text-align: center;
   padding: 20px;
-  height: 20vh; /* Occupy 20% of the viewport height */
+  height: 20vh; /* Adjust the height as needed */
   margin-top: auto; /* Pushes footer to the bottom */
-  width: 100%; /* Full width */
+  width: 100vw; /* Full width of the viewport */
   display: flex;
   flex-direction: column;
   justify-content: center; /* Vertically center content */
   align-items: center; /* Horizontally center content */
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
 }
 
     .support-link {
