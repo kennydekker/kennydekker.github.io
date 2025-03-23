@@ -66,60 +66,56 @@
 
 /* Heading and Image */
 /* Wrapper for the entire intro section */
+/* Wrapper: centers all content */
 .intro-wrapper {
-  display: flex;
-  flex-direction: column; /* Stack sections vertically */
-  align-items: center; /* Center all content horizontally */
-  margin: 150px auto; /* Space from the top */
-  max-width: 800px;
-  padding: 0 20px;
+  max-width: 800px; /* Restrict overall width */
+  margin: 150px auto; /* Center vertically and horizontally */
+  padding: 0 20px; /* Add padding for responsiveness */
+  text-align: center; /* Center-align summary and button */
 }
 
-/* Heading with Image */
+/* Align image and heading */
 .intro-heading {
   display: flex;
-  align-items: center; /* Align image and heading vertically */
-  gap: 20px; /* Space between image and heading */
-  text-align: left; /* Align heading text */
+  align-items: center; /* Vertically align image and heading */
+  justify-content: center; /* Center content as a block */
+  gap: 20px; /* Add space between image and heading */
+  margin-bottom: 20px; /* Space between heading and summary */
 }
 
 .intro-heading img {
-  width: 80px; /* Image size */
+  width: 80px; /* Control the size of the image */
   height: 80px;
   border-radius: 50%; /* Circular image */
 }
 
 .intro-heading h1 {
-  font-size: 2em; /* Heading size */
-  margin: 0; /* Remove unnecessary margins */
+  font-size: 2em; /* Adjust heading size */
+  margin: 0; /* Remove unnecessary spacing */
+  text-align: left; /* Keep the heading aligned properly */
 }
 
-/* Summary and Button */
+/* Summary */
 .intro-summary {
-  margin-top: 20px; /* Space between heading and summary */
-  text-align: center; /* Center-align the summary text and button */
+  max-width: 500px; /* Constrain width of summary text */
+  margin: 0 auto 20px auto; /* Center the summary */
+  line-height: 1.5; /* Add space between lines */
+  text-align: left; /* Align the text naturally */
 }
 
-.intro-summary p {
-  font-size: 1em; /* Standard font size for summary */
-  max-width: 500px; /* Constrain the width of the summary text */
-  margin: 0 auto 20px auto; /* Center the paragraph and add spacing below */
-  line-height: 1.5; /* Improve readability */
-}
-
-button {
+/* Button */
+.contact-button {
   font-size: 1em;
   padding: 10px 20px;
-  background-color: white;
+  background-color: white; /* Clean, white button */
   color: black;
   border: 1px solid black;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 20px; /* Add space above the button */
 }
 
-button:hover {
-  background-color: lightgray; /* Slight hover effect */
+.contact-button:hover {
+  background-color: lightgray; /* Subtle hover effect */
 }
     
     #contact-form {
