@@ -33,26 +33,18 @@
     }
 .intro-wrapper {
   display: flex;
-  justify-content: center; /* Center the entire intro-wrapper horizontally */
-  align-items: center; /* Center content vertically if needed */
-  margin: 0 auto; /* Center the wrapper on the page */
-  max-width: 100%; /* Ensure it spans the page width */
-  padding: 0 20px; /* Add some padding for responsiveness */
-  text-align: center; /* Ensure all child content aligns in the center */
-}
-.intro-wrapper {
-  display: flex;
-  justify-content: center; /* Center everything horizontally */
-  margin: 0 auto; /* Center the entire wrapper */
-  max-width: 800px; /* Keep a manageable width */
-  padding: 20px; /* Add padding for spacing */
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center all content horizontally */
+  margin: 150px auto; /* Add spacing from the top (previously 100px) */
+  max-width: 800px; /* Limit the width of the section */
+  padding: 0 20px; /* Add responsive padding */
 }
 
 .intro-section {
   display: flex;
-  align-items: center; /* Align the image and text vertically */
+  align-items: center; /* Align image and text vertically */
   gap: 20px; /* Add space between the image and text */
-  text-align: left; /* Keep the text aligned to the left */
+  text-align: left; /* Keep text aligned to the left */
 }
 
 .intro-section img {
