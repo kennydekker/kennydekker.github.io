@@ -163,25 +163,21 @@ html, body {
   height: 100%; /* Full height of viewport */
   margin: 0;
   display: flex;
-  flex-direction: column; /* Stack elements vertically */
-}
-
-/* Main content container */
-.container {
-  flex: 1; /* Fills available space */
-  display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
-/* Footer Styles */
 footer {
   background: #333; /* Black background */
   color: white; /* White text */
   text-align: center;
   padding: 20px;
-  margin-top: auto; /* Pushes footer to the bottom */
+  height: 50vh; /* Occupy half the viewport height */
+  margin-top: auto; /* Ensures it's at the bottom of content */
   width: 100%; /* Full width */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center content */
+  align-items: center; /* Horizontally center content */
 }
 
     .support-link {
