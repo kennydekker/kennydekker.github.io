@@ -42,51 +42,41 @@
 }
 .intro-wrapper {
   display: flex;
-  justify-content: center; /* Horizontally center the entire wrapper */
-  align-items: flex-start; /* Align content starting from the top */
-  margin: 100px auto; /* Add spacing from the top */
-  max-width: 100%; /* Ensure it spans the page width */
-  padding: 0 20px; /* Add padding for responsiveness */
+  justify-content: center; /* Center everything horizontally */
+  margin: 0 auto; /* Center the entire wrapper */
+  max-width: 800px; /* Keep a manageable width */
+  padding: 20px; /* Add padding for spacing */
 }
-.button-wrapper {
-  display: flex;
-  justify-content: center; /* Center the button horizontally */
-  margin-top: 20px; /* Add spacing above the button */
-  width: 100%; /* Ensure the wrapper spans the width of the content */
-}
+
 .intro-section {
   display: flex;
-  align-items: flex-start; /* Align image and text from the top */
-  justify-content: center; /* Center horizontally */
-  flex-wrap: wrap; /* Allow the text to wrap below the image if needed */
-  max-width: 800px; /* Restrict width for better alignment */
-  text-align: left;
-  gap: 20px; /* Space between the image and text */
+  align-items: center; /* Align the image and text vertically */
+  gap: 20px; /* Add space between the image and text */
+  text-align: left; /* Keep the text aligned to the left */
 }
 
 .intro-section img {
-  width: 80px; /* Adjust image size */
+  width: 80px;
   height: 80px;
-  border-radius: 50%; /* Circular photo */
+  border-radius: 50%; /* Circular image */
 }
 
 .intro-section div {
   display: flex;
-  flex-direction: column; /* Stack heading and summary */
-  align-items: flex-start; /* Keep text aligned left */
-  margin-top: 20px; /* Add spacing above text to avoid hotbar collision */
+  flex-direction: column; /* Stack the heading, summary, and button */
+  align-items: center; /* Center-align the content inside this block */
 }
 
 .intro-section h1 {
-  font-size: 2em; /* Adjust heading size */
-  margin: 0; /* Remove unnecessary margin */
+  font-size: 2em;
+  margin: 0;
 }
 
 .intro-section p {
-  font-size: 1em; /* Adjust paragraph size */
-  margin: 10px 0 0; /* Space between heading and summary */
-  max-width: 600px; /* Keep the paragraph constrained */
-  text-align: left; /* Ensure proper alignment */
+  font-size: 1em;
+  margin: 10px 0 20px 0; /* Add spacing between the summary and the button */
+  text-align: center; /* Center-align the summary text */
+  max-width: 600px; /* Restrict the width for readability */
 }
 
 button {
@@ -228,10 +218,8 @@ button:hover {
     <div>
       <h1>Hi! I'm <span style="color: blue;">Kenny Dekker</span>!</h1>
       <p>I'm a professional software developer with over five years of experience in designing, developing, and optimizing websites for businesses of all sizes. I specialize in creating user-focused, responsive, and visually stunning websites that deliver measurable results.</p>
+      <button onclick="showForm()">Contact Me</button>
     </div>
-  </div>
-  <div class="button-wrapper">
-    <button onclick="showForm()">Contact Me</button>
   </div>
 </div>
   
