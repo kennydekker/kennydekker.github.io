@@ -31,25 +31,31 @@
     .hotbar a:hover {
       background-color: #555; /* Slightly lighter on hover */
     }
-    .intro-section {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px; /* Space between photo and text */
-      margin-top: 100px;
-    }
-    .intro-section img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%; /* Circular photo */
-    }
-    .intro-section h1 {
-      font-size: 3em;
-      margin: 0;
-    }
-    p {
-      font-size: 1.2em;
-    }
+.intro-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; /* Stack content vertically */
+  text-align: center; /* Center text alignment */
+  margin-top: 100px;
+  max-width: 600px; /* Limit the width to make it smaller */
+  margin-left: auto; /* Center horizontally */
+  margin-right: auto;
+}
+.intro-section img {
+  width: 80px; /* Smaller image */
+  height: 80px;
+  border-radius: 50%; /* Circular photo */
+}
+.intro-section h1 {
+  font-size: 2em; /* Reduce font size */
+  margin: 10px 0; /* Add a bit of space */
+}
+p {
+  font-size: 1em; /* Make text slightly smaller */
+  max-width: 500px; /* Restrict width for better readability */
+  margin: 0 auto; /* Center align paragraph within container */
+}
     button {
       font-size: 1em;
       padding: 10px 20px;
