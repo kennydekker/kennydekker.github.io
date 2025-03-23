@@ -64,18 +64,36 @@
   margin: 0;
 }
 
+.intro-heading {
+  display: flex;
+  align-items: center; /* Vertically align the image and text */
+  justify-content: flex-start; /* Align items to the left */
+  gap: 20px; /* Add space between the image and heading */
+}
+
+.intro-heading img {
+  width: 80px; /* Set the image size */
+  height: 80px;
+  border-radius: 50%; /* Circular image */
+}
+
+.intro-heading h1 {
+  font-size: 2em; /* Keep a readable size for the heading */
+  margin: 0; /* Remove extra margin */
+}
+
 .intro-section p {
-  font-size: 1em; /* Keep readable font size */
-  margin: 10px 0; /* Add spacing above and below */
+  font-size: 1em; /* Standard text size */
+  margin: 10px 0; /* Add spacing */
   max-width: 500px; /* Restrict paragraph width */
-  text-align: left; /* Align text naturally to the left */
-  word-wrap: break-word; /* Ensure words don’t overflow */
-  line-height: 1.5; /* Add proper line spacing for readability */
+  text-align: left; /* Align paragraph to the left */
+  line-height: 1.5; /* Set good line spacing */
 }
 
 button {
   font-size: 1em;
   padding: 10px 20px;
+  margin-top: 20px; /* Add space between paragraph and button */
   background-color: white;
   color: black;
   border: 1px solid black;
@@ -208,12 +226,12 @@ button:hover {
   <!-- Intro Section -->
 <div class="intro-wrapper">
   <div class="intro-section">
-    <img src="Kenny.jpg" alt="Professional Photo">
-    <div>
+    <div class="intro-heading">
+      <img src="Kenny.jpg" alt="Professional Photo">
       <h1>Hi! I'm <span style="color: blue;">Kenny Dekker</span>!</h1>
-      <p>I'm a professional software developer with over five years of experience in designing, developing, and optimizing websites for businesses of all sizes. I specialize in creating user-focused, responsive, and visually stunning websites that deliver measurable results.</p>
-      <button onclick="showForm()">Contact Me</button>
     </div>
+    <p>I'm a professional software developer with over five years of experience in designing, developing, and optimizing websites for businesses of all sizes. I specialize in creating user-focused, responsive, and visually stunning websites that deliver measurable results.</p>
+    <button onclick="showForm()">Contact Me</button>
   </div>
 </div>
   
