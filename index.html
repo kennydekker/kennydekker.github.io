@@ -33,14 +33,15 @@
     }
 .intro-section {
   display: flex;
-  align-items: center; /* Vertically align the image and text */
+  align-items: center; /* Align photo and text vertically */
   justify-content: center; /* Center the section horizontally */
+  flex-wrap: wrap; /* Allow the content to wrap if necessary */
   margin-top: 100px;
-  max-width: 800px; /* Restrict the width of the section */
+  max-width: 800px; /* Restrict the width */
   margin-left: auto;
   margin-right: auto;
-  gap: 20px; /* Space between the image and the text */
-  text-align: left;
+  text-align: left; /* Keep the text properly aligned */
+  gap: 20px; /* Space between the image and text */
 }
 .intro-section img {
   width: 80px; /* Smaller image size */
@@ -49,18 +50,18 @@
 }
 .intro-section div {
   display: flex;
-  flex-direction: column; /* Stack the heading and summary inside the text block */
-  align-items: flex-start; /* Align text to the left */
+  flex-direction: column; /* Stack heading and summary */
+  align-items: flex-start; /* Keep text left-aligned within its container */
 }
 .intro-section h1 {
   font-size: 2em; /* Adjust font size */
-  margin: 0; /* Remove extra space */
+  margin: 0; /* Remove extra spacing */
 }
 .intro-section p {
-  font-size: 1em; /* Ensure proper summary size */
-  margin-top: 10px; /* Add space between the heading and summary */
-  max-width: 600px; /* Keep the summary constrained */
-  white-space: normal; /* Ensure all text wraps properly */
+  font-size: 1em; /* Standardize text size */
+  max-width: 600px; /* Restrict paragraph width for readability */
+  margin: 10px 0 0 0; /* Add spacing between heading and summary */
+  text-align: left; /* Keep paragraph aligned with heading */
 }
     button {
       font-size: 1em;
