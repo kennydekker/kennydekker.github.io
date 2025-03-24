@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kenny's Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Hotbar Navigation */
+    .hotbar {
+      background-color: #333; /* Dark background */
+      overflow: hidden;
+      position: fixed; /* Sticks to the top */
+      top: 0;
+      width: 100%; /* Full width */
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+
+    .hotbar a {
+      color: white; /* White text */
+      padding: 10px 20px;
+      text-decoration: none; /* No underline */
+      text-align: center;
+    }
+
+    .hotbar a:hover {
+      background-color: #555; /* Slightly lighter on hover */
+    }
+
+    .intro-wrapper {
+      display: flex;
+      flex-direction: column; /* Stack elements vertically */
+      align-items: center; /* Center content horizontally */
+      margin: 150px auto; /* Add spacing from the top */
+      max-width: 800px; /* Limit the width of the section */
+      padding: 0 20px; /* Add responsive padding */
+    }
+
+    .intro-section {
+        display: flex;
+        align-items: flex-start; /* Align image with the header */
+        gap: 20px; /* Add spacing between the image and text */
+        
+    }
+    .intro-section img {
+        align-self: flex-start; /* Keep the image aligned to the top */
+        
+    }
+    .intro-summary {
+      display: flex;
+      flex-direction: column; /* Stack summary text and button */
+      align-items: center; /* Center align text and button */
+      max-width: 500px; /* Constrain width of summary text */
+      line-height: 1.5; /* Add space between lines */
+    }
+
+    .intro-summary p {
+      text-align: left; /* Align the text to the left */
+    }
+    
+.contact-button {
+  font-size: 1.5em; /* Bold and professional font size */
+  padding: 15px 30px; /* Ample padding for prominence */
+  background-color: #BF00FF; /* Vibrant electric purple */
+  color: white; /* High contrast for clear readability */
+  border: 2px solid #BF00FF; /* Matching border for seamless design */
+  border-radius: 8px; /* Smooth, modern corners */
+  cursor: pointer;
+  margin-top: 30px; /* Generous spacing after the summary */
+  font-family: 'Arial', sans-serif; /* Clean and professional font */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth interactive effects */
+}
+
+.contact-button:hover {
+  background-color: #9F00CC; /* Slightly darker electric purple on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle yet bold shadow effect */
+  transform: scale(1.1); /* Noticeable zoom-in effect */
+}
+
+
+
+
+#contact-form { 
+    display: none; 
+    position: fixed; 
+    top: 50%; left: 50%; 
+    transform: 
+    translate(-50%, -50%); 
+    background: #f9f9f9; 
+    border: 1px solid #ccc; 
+    padding: 90px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    width: 500px; 
+    max-width: 90%; }
+
+#contact-form h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px; /* Adds space below the header */
+  text-align: center;
+}
+
+#contact-form input, #contact-form textarea {
+  width: 100%; /* Ensure fields stretch fully across the popup */
+  margin-bottom: 15px; /* Adjust space between fields */
+  padding: 10px; /* Maintain padding inside the fields */
+  border: 1px solid #ccc;
+  border-radius: 5px; /* Smooth corners for a polished look */
+}
+
+#contact-form button {
+  font-size: 1em;
+  margin-top: 15px; /* Adds space between buttons and fields */
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: 2px solid #ccc; /* Visible border */
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#contact-form button:hover {
+  background-color: #555; /* Slightly lighter hover effect */
+  border-color: #888; /* Subtle change on hover */
+}
+
+
+/* Projects Section Styling */
+.projects-section {
+  padding: 90px 60px; /* Increased padding for a more spacious layout */
+  background: #121212; /* Professional dark background */
+  color: white;
+  text-align: center;
+}
+
+.projects-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3em; /* Larger title font size */
+  letter-spacing: 2px; /* More spacing for emphasis */
+  margin-bottom: 50px; /* Increase space below the title */
+}
+
+/* Individual Box Styling */
+.box {
+  display: flex;
+  align-items: center;
+  margin: 30px auto; /* Increased spacing between boxes */
+  padding: 40px; /* Larger padding for a roomier box */
+  background: #222; /* Dark gray for premium feel */
+  border-radius: 15px; /* More rounded corners */
+  width: 85%; /* Increased width */
+  color: white;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.3s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+.box img {
+  width: 200px; /* Larger image size for better visibility */
+  height: auto;
+  border-radius: 50%; /* Circular client photo */
+  margin: 0 30px; /* More space between image and text */
+}
+
+/* Left-aligned photo */
+.box:nth-child(even) {
+  flex-direction: row;
+}
+
+/* Right-aligned photo */
+.box:nth-child() {
+  flex-direction: row-reverse;
+}
+
+.box:hover {
+  background: #333; /* Slightly lighter gray on hover */
+  transform: scale(1.05); /* Enhanced growth effect */
+}
+/* Footer Styles */
+/* Ensure the page takes up the full height */
+html, body {
+  height: 100%; /* Full height of viewport */
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  background: #333; /* Black background */
+  color: white; /* White text */
+  text-align: center;
+  padding: 20px;
+  height: 20vh; /* Adjust the height as needed */
+  margin-top: auto; /* Pushes footer to the bottom */
+  width: 100vw; /* Full width of the viewport */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center content */
+  align-items: center; /* Horizontally center content */
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+    .support-link {
+      color: forestgreen;
+      text-decoration: none;
+      font-size: 1em;
+      display: inline-flex;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .support-link:hover {
+      text-decoration: underline;
+    }
+
+    .support-link span {
+      margin-right: 5px; /* Space between the symbol and text */
+    }
+  </style>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+<body>
+  <!-- Hotbar Navigation -->
+  <div class="hotbar">
+    <a href="index.html">Home</a>
+    <a onclick="showForm()">Contact</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">My Projects</a>
+  </div>
+
+<!-- Intro Section -->
+<div class="intro-wrapper">
+  <div class="intro-section">
+    <img src="Kenny.jpg" alt="Professional Photo" style="width: 150px; height: auto; border-radius: 10px; margin-right: 20px;">
+    <div class="intro-summary">
+      <h1 style="font-size: 2.5em; color: black; margin-bottom: 20px;">Hi! I'm <span style="color: blue;">Kenny Dekker</span>!</h1>
+      <p style="font-size: 1.2em; color: black;">I'm a professional software developer with over five years of experience in designing, developing, and optimizing websites for businesses of all sizes. I specialize in creating user-focused, responsive, and visually stunning websites that deliver measurable results.</p>
+      <!-- Invisible Section -->
+      <div class="spacer"></div>
+      <button class="contact-button" onclick="showForm()">Contact Me</button>
+    </div>
+  </div>
+</div>
+
+  <!-- Contact Form -->
+  <div id="contact-form">
+    <h2>Contact Me</h2>
+    <form action="mailto:kennydekker@mail.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="summary" placeholder="Summary" rows="4" required></textarea>
+      <button type="submit">Send</button>
+      <button type="button" onclick="hideForm()">Close</button>
+    </form>
+  </div>
+
+<!-- Projects Section -->
+<div class="projects-section">
+  <h1 class="projects-title">Projects I Love</h1>
+
+  <!-- Individual Project Boxes -->
+  <a href="https://redirect-link1.com" target="_blank" class="box">
+    <img src="client1.jpg" alt="Client 1">
+    <p>"Kenny revamped our e-commerce website, and our sales increased by 40%. His design and functionality changes were brilliant!"</p>
+  </a>
+
+  <a href="https://redirect-link2.com" target="_blank" class="box">
+    <p>"Working with Kenny was an absolute pleasure. He built us a modern, user-friendly website that our clients love!"</p>
+    <img src="client2.jpg" alt="Client 2">
+  </a>
+
+  <a href="https://redirect-link3.com" target="_blank" class="box">
+    <img src="client3.jpg" alt="Client 3">
+    <p>"Kenny transformed our outdated site into a sleek, mobile-friendly experience. Couldn’t be happier with the results."</p>
+  </a>
+</div>
+
+  <!-- Invisible Section -->
+  <div class="spacer"></div>
+<!-- Featured Work Section -->
+<div class="projects-section" style="background: white; color: black; padding: 40px 0;">
+  <h1 class="featured-title" style="color: black; font-size: 2.5em; margin-bottom: 30px;">Featured Work</h1>
+
+<!-- Responsive Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+  
+  <!-- Card 1 -->
+  <a href="https://example-link1.com" target="_blank" class="featured-article p-6 bg-white border border-gray-300 rounded-lg shadow-md transform transition hover:scale-105 hover:shadow-lg">
+    <img src="ecommerce.jpg" alt="E-Commerce Redesign" class="w-full h-48 object-cover rounded-t-md">
+    <h2 class="text-xl font-bold mt-4" style="color: black;">E-Commerce Redesign</h2>
+    <p class="text-gray-600" style="color: black;">A complete overhaul of a large online retailer's website, focusing on usability, performance, and conversion optimization.</p>
+    <p class="mt-2 text-sm font-semibold text-green-500">Impact: +40% Conversion Rate</p>
+  </a>
+
+  <!-- Card 2 -->
+  <a href="https://example-link2.com" target="_blank" class="featured-article p-6 bg-white border border-gray-300 rounded-lg shadow-md transform transition hover:scale-105 hover:shadow-lg">
+    <img src="portfolio.jpg" alt="Portfolio Site Creation" class="w-full h-48 object-cover rounded-t-md">
+    <h2 class="text-xl font-bold mt-4" style="color: black;">Portfolio Site Creation</h2>
+    <p class="text-gray-600" style="color: black;">Developed a portfolio platform for creatives to showcase their work with interactive galleries and seamless navigation.</p>
+    <p class="mt-2 text-sm font-semibold text-green-500">Featured in: Star Tribune</p>
+  </a>
+
+  <!-- Card 3 -->
+  <a href="https://example-link3.com" target="_blank" class="featured-article p-6 bg-white border border-gray-300 rounded-lg shadow-md transform transition hover:scale-105 hover:shadow-lg">
+    <img src="responsive.jpg" alt="Responsive Redesign" class="w-full h-48 object-cover rounded-t-md">
+    <h2 class="text-xl font-bold mt-4" style="color: black;">Responsive Redesign</h2>
+    <p class="text-gray-600" style="color: black;">Helped several small businesses adopt responsive, mobile-first websites to improve customer engagement and accessibility.</p>
+    <p class="mt-2 text-sm font-semibold text-green-500">Enhanced: Mobile Engagement</p>
+  </a>
+
+</div>
+
+
+  </div>
+
+
+<!-- AOS Initialization --> 
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js">
+</script> 
+<script> 
+AOS.init(); 
+</script>
+
+  <!-- Invisible Section -->
+  <div class="spacer"></div>
+  <div class="container">
+    <!-- Main content -->
+    <div class="content">
+      <!-- Everything above the footer -->
+    </div>
+    <footer>
+      <p>&copy; 2025 Kenny Dekker. All Rights Reserved.</p>
+      <a href="https://www.patreon.com/" target="_blank" class="support-link">
+        <span>🔥</span>Support my work
+      </a>
+    </footer>
+  </div>
+  <script>
+    function showForm() {
+      document.getElementById('contact-form').style.display = 'block';
+    }
+    function hideForm() {
+      document.getElementById('contact-form').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
