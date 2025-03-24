@@ -3,8 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Picture Overlay</title>
+    <title>Intro Section</title>
     <style>
+        body {
+            margin: 0; /* Remove default margin */
+        }
+
+        .intro-section {
+            position: relative;
+            width: 100%; /* Stretch across the screen */
+            height: 100vh; /* Full viewport height */
+            background-color: black; /* Black background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
         .container {
             position: relative;
             width: fit-content;
@@ -14,21 +28,24 @@
             position: absolute;
             top: 0;
             left: 0;
-            z-index: 2; /* Ensure this is on top */
+            z-index: 2; /* Picture 1 is on top */
         }
 
         .image2 {
             position: absolute;
             top: 0;
             left: 0;
-            z-index: 1; /* Keep this below Picture 1 */
+            z-index: 1; /* Picture 2 is below Picture 1 */
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <img src="Picture Overlay.png" alt="Overlay" class="image1">
-        <img src="Kenny_Basic.png" alt="Background" class="image2">
-    </div>
+    <section class="intro-section">
+        <div class="container">
+            <img src="Picture Overlay.png" alt="Overlay" class="image1">
+            <img src="Kenny_Basic.jpg" alt="Background" class="image2">
+        </div>
+    </section>
 </body>
 </html>
+
