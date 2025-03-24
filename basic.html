@@ -42,7 +42,7 @@
       margin-top: 60px; /* Pushes the section below the hotbar */
       width: 100vw; /* Covers the full width of the viewport */
       height: calc(100vh - 60px); /* Adjusts height to exclude hotbar */
-      background-image: url('Empty Left Overlay2.png'); /* Background overlay image */
+      background-image: url('Empty Left Overlay.png'); /* Background overlay image */
       background-size: cover; /* Ensures the background scales to fit */
       background-repeat: no-repeat; /* Prevents tiling */
       background-position: center; /* Centers the overlay */
@@ -50,12 +50,14 @@
     }
 
     .intro-section img {
-      position: relative; /* Keeps the image properly positioned */
+      position: absolute; /* Enables precise positioning */
+      top: 50%; /* Centers image vertically */
+      left: 20%; /* Adjusts the horizontal position */
+      transform: translate(-50%, -50%); /* Smooth centering adjustment */
       width: 220px; /* Adjust width for proper fit */
       height: 220px; /* Match height with width */
       border-radius: 50%; /* Keeps the image circular */
       object-fit: cover; /* Ensures the image fills its container */
-      margin-left: 30px; /* Adds spacing from the left */
     }
 
     .intro-summary {
@@ -102,10 +104,11 @@
   <div class="intro-section">
     <img src="Kenny_Basic.jpg" alt="Kenny's Photo">
     <div class="intro-summary">
-
+      <h1 style="font-size: 2.5em; color: black; margin-bottom: 10px;">Hi! I'm <span style="color: blue;">Kenny Dekker</span>!</h1>
+      <p style="font-size: 1.2em; color: black;">I'm a professional software developer with over five years of experience in designing, developing, and optimizing websites for businesses of all sizes. I specialize in creating user-focused, responsive, and visually stunning websites that deliver measurable results.</p>
+      <button class="contact-button" onclick="showForm()">Contact Me</button>
     </div>
   </div>
 </body>
 </html>
-
 
