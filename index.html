@@ -258,26 +258,18 @@ footer {
 
 
 
-  <!-- Contact Form -->
-  <div id="contact-form">
-    <h2>Contact Me</h2>
-    <form action="https://getform.io/f/anlqyzla" method="post" enctype="text/plain">
-      <input type="text" name="name" placeholder="Name" required>
-      <input type="tel" name="phone" placeholder="Phone Number" required>
-      <input type="email" name="email" placeholder="Email" required>
-      <textarea name="summary" placeholder="Summary" rows="4" required></textarea>
-      <button type="submit">Send</button>
-      <button type="button" onclick="hideForm()">Close</button>
-    </form>
-  </div>" method="post" enctype="text/plain">
-      <input type="text" name="name" placeholder="Name" required>
-      <input type="tel" name="phone" placeholder="Phone Number" required>
-      <input type="email" name="email" placeholder="Email" required>
-      <textarea name="summary" placeholder="Summary" rows="4" required></textarea>
-      <button type="submit">Send</button>
-      <button type="button" onclick="hideForm()">Close</button>
-    </form>
-  </div>
+<div id="contact-form">
+  <h2>Contact Me</h2>
+  <form action="https://getform.io/f/anlqyzla" method="POST"> <!-- Connects form to Getform -->
+    <input type="text" name="name" placeholder="Name" required>
+    <input type="tel" name="phone" placeholder="Phone Number" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <textarea name="summary" placeholder="Your Message" rows="4" required></textarea>
+    <button type="submit" class="contact-button">Send</button>
+    <button type="button" onclick="hideForm()">Close</button>
+  </form>
+</div>
+
 
 <!-- Projects Section -->
 <div class="projects-section">
