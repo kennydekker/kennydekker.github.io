@@ -39,10 +39,14 @@
 /* Footer Styles */
 /* Ensure the page takes up the full height */
 html, body {
-  height: 100%; /* Full height of viewport */
+  height: 100%; /* Make the entire page cover the full viewport height */
   margin: 0;
   display: flex;
   flex-direction: column;
+}
+
+#works-container {
+  flex-grow: 1; /* Allow the content to grow and fill available space */
 }
 
 footer {
@@ -50,15 +54,16 @@ footer {
   color: white; /* White text */
   text-align: center;
   padding: 20px;
-  height: 20vh; /* Adjust the height as needed */
-  margin-top: auto; /* Pushes footer to the bottom */
-  width: 100vw; /* Full width of the viewport */
+  height: 20vh; /* Footer height */
+  margin-top: auto; /* Pushes footer to the bottom of the viewport */
+  width: 100%; /* Full width */
   display: flex;
   flex-direction: column;
   justify-content: center; /* Vertically center content */
   align-items: center; /* Horizontally center content */
   box-sizing: border-box; /* Ensures padding doesn't affect width */
 }
+
     
     .support-link {
       color: forestgreen;
