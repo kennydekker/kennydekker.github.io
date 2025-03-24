@@ -10,7 +10,6 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f4f4f4; /* Light gray background */
       color: #333; /* Professional text color */
       text-align: center;
     }
@@ -77,6 +76,24 @@
     .about-summary p {
       line-height: 1.6;
       font-size: 1.1em;
+    }
+
+    /* Fun Fact Animation */
+    .fun-fact {
+      margin-top: 20px;
+      color: #6A0DAD; /* Purple accent for dynamic flair */
+      font-size: 1.2em;
+      font-style: italic;
+      animation: fadeIn 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0.5;
+      }
+      to {
+        opacity: 1;
+      }
     }
 
     /* Call-to-Action Button */
