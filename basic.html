@@ -46,28 +46,26 @@
 
     /* Updated intro-section styling */
     .intro-section {
-      position: relative; /* Establishes relative positioning for the image and background */
+      position: relative; /* Allows layering of the overlay and content */
       display: flex;
-      align-items: center; /* Aligns content vertically */
-      justify-content: flex-start; /* Aligns content horizontally */
-      width: 100%;
-      background-image: url('Empty Left Overlay.png'); /* Background image with oval */
-      background-size: contain; /* Ensures the oval fits properly */
+      align-items: center; /* Vertically align contents */
+      justify-content: flex-start; /* Horizontally align content */
+      width: 100%; /* Full width */
+      height: 300px; /* Ensures the section takes up the desired height */
+      background-image: url('Empty_Left_Overlay.png'); /* Background overlay image */
+      background-size: cover; /* Ensures the background fills the container */
       background-repeat: no-repeat; /* Prevents tiling */
-      background-position: left; /* Positions the oval to the left */
-      padding: 20px; /* Adds space inside the section */
-      height: 300px; /* Ensures space for the image */
+      background-position: center; /* Centers the overlay */
     }
 
     .intro-section img {
-      position: absolute; /* Absolute positioning to fit within the transparent oval */
-      top: 50%; /* Aligns image vertically */
-      left: 5%; /* Aligns image horizontally */
-      transform: translate(0, -50%); /* Ensures the image centers properly */
+      z-index: 1; /* Ensures the image stays below the overlay */
+      position: relative; /* Keeps the image properly positioned */
       width: 220px; /* Adjust width for proper fit */
       height: 220px; /* Match height with width */
-      border-radius: 50%; /* Ensures the image is circular */
+      border-radius: 50%; /* Keeps the image circular */
       object-fit: cover; /* Ensures the image fills its container */
+      margin-left: 30px; /* Adds spacing from the left */
     }
 
     .intro-summary {
@@ -81,7 +79,7 @@
     .intro-summary p {
       text-align: left; /* Align the text to the left */
     }
-    
+
     .contact-button {
       font-size: 1.5em; /* Bold and professional font size */
       padding: 15px 30px; /* Ample padding for prominence */
@@ -144,7 +142,6 @@
       border-color: #888; /* Subtle change on hover */
     }
   </style>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body>
   <!-- Hotbar Navigation -->
@@ -157,9 +154,11 @@
 
   <div class="intro-wrapper">
     <div class="intro-section">
-      <img src="Kenny_Basic.jpg" alt="Kenny's Photo">
+      <img src="Kenny_Basic.png" alt="Kenny's Photo">
       <div class="intro-summary">
-
+        <h1 style="font-size: 2.5em; color: black; margin-bottom: 10px;">Hi! I'm <span style="color: blue;">Kenny Dekker</span>!</h1>
+        <p style="font-size: 1.2em; color: black;">I'm a professional software developer with over five years of experience in designing, developing, and optimizing websites for businesses of all sizes. I specialize in creating user-focused, responsive, and visually stunning websites that deliver measurable results.</p>
+        <button class="contact-button" onclick="showForm()">Contact Me</button>
       </div>
     </div>
   </div>
