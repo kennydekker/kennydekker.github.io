@@ -163,10 +163,12 @@
 }
 
 .box img {
-  width: 200px; /* Larger image size for better visibility */
-  height: auto;
-  border-radius: 50%; /* Circular client photo */
-  margin: 0 30px; /* More space between image and text */
+  width: 100px; /* Small image size */
+  height: 100px; /* Ensures uniform square dimensions */
+  object-fit: cover; /* Scales and crops the image to fill the box */
+  object-position: center top; /* Focuses on the top-center (where the face usually is) */
+  border-radius: 50%; /* Circular cropping for the images */
+  margin: 0 20px; /* Adjust spacing between image and text */
 }
 
 /* Left-aligned photo */
