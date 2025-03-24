@@ -17,17 +17,17 @@
       background-color: #333; /* Dark background */
       overflow: hidden;
       position: fixed; /* Sticks to the top */
-      top: 0;
+      top: 0; /* Aligns to the top of the viewport */
       width: 100%; /* Full width */
       display: flex;
       justify-content: center;
-      padding: 10px 0;
+      padding: 10px 0; /* Adds spacing inside the hotbar */
       z-index: 2; /* Ensures it stays above the background */
     }
 
     .hotbar a {
       color: white; /* White text */
-      padding: 10px 20px;
+      padding: 10px 20px; /* Adds padding around links */
       text-decoration: none; /* No underline */
       text-align: center;
     }
@@ -38,11 +38,10 @@
 
     /* Updated intro-section styling */
     .intro-section {
-      position: absolute; /* Makes the section fill the page */
-      top: 0; /* Aligns to the top of the viewport */
-      left: 0; /* Aligns to the left of the viewport */
+      position: relative; /* Ensures it does not overlap with other content */
+      margin-top: 60px; /* Pushes the section below the hotbar */
       width: 100vw; /* Covers the full width of the viewport */
-      height: 100vh; /* Covers the full height of the viewport */
+      height: calc(100vh - 60px); /* Adjusts height to exclude hotbar */
       background-image: url('Empty Left Overlay.png'); /* Background overlay image */
       background-size: cover; /* Ensures the background scales to fit */
       background-repeat: no-repeat; /* Prevents tiling */
@@ -103,9 +102,12 @@
   <div class="intro-section">
     <img src="Kenny_Basic.jpg" alt="Kenny's Photo">
     <div class="intro-summary">
+      <h1 style="font-size: 2.5em; color: black; margin-bottom: 10px;">Hi! I'm <span style="color: blue;">Kenny Dekker</span>!</h1>
+      <p style="font-size: 1.2em; color: black;">I'm a professional software developer with over five years of experience in designing, developing, and optimizing websites for businesses of all sizes. I specialize in creating user-focused, responsive, and visually stunning websites that deliver measurable results.</p>
       <button class="contact-button" onclick="showForm()">Contact Me</button>
     </div>
   </div>
 </body>
 </html>
+
 
