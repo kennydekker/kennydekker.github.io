@@ -134,11 +134,78 @@ footer {
       margin-bottom: 40px; /* Adds spacing between articles and footer */
     }
 
+    .contact-button {
+  font-size: 1.5em; /* Bold and professional font size */
+  padding: 15px 30px; /* Ample padding for prominence */
+  background-color: #BF00FF; /* Vibrant electric purple */
+  color: white; /* High contrast for clear readability */
+  border: 2px solid #BF00FF; /* Matching border for seamless design */
+  border-radius: 8px; /* Smooth, modern corners */
+  cursor: pointer;
+  margin-top: 30px; /* Generous spacing after the summary */
+  font-family: 'Arial', sans-serif; /* Clean and professional font */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth interactive effects */
+}
+
+.contact-button:hover {
+  background-color: #9F00CC; /* Slightly darker electric purple on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle yet bold shadow effect */
+  transform: scale(1.1); /* Noticeable zoom-in effect */
+}
+
+
+
+
+#contact-form { 
+    display: none; 
+    position: fixed; 
+    top: 50%; left: 50%; 
+    transform: 
+    translate(-50%, -50%); 
+    background: #f9f9f9; 
+    border: 1px solid #ccc; 
+    padding: 90px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    width: 500px; 
+    max-width: 90%; }
+
+#contact-form h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px; /* Adds space below the header */
+  text-align: center;
+}
+
+#contact-form input, #contact-form textarea {
+  width: 100%; /* Ensure fields stretch fully across the popup */
+  margin-bottom: 15px; /* Adjust space between fields */
+  padding: 10px; /* Maintain padding inside the fields */
+  border: 1px solid #ccc;
+  border-radius: 5px; /* Smooth corners for a polished look */
+}
+
+#contact-form button {
+  font-size: 1em;
+  margin-top: 15px; /* Adds space between buttons and fields */
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: 2px solid #ccc; /* Visible border */
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#contact-form button:hover {
+  background-color: #555; /* Slightly lighter hover effect */
+  border-color: #888; /* Subtle change on hover */
+}
+
   </style>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body>
   <!-- Page Content -->
-  <div id="contact-form" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1000; background: white; padding: 20px; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); width: 90%; max-width: 400px;">
+    <!-- Contact Form -->
+<div id="contact-form" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1000; background: white; padding: 20px; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); width: 90%; max-width: 400px;">
   <h2>Contact Me</h2>
   <form action="https://getform.io/f/anlqyzla" method="POST">
     <input type="text" name="name" placeholder="Name" required style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px;">
@@ -227,6 +294,20 @@ footer {
           work.style.display = 'none';
         }
       });
+    }
+  </script>
+  <!-- AOS Initialization --> 
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js">
+</script> 
+<script> 
+AOS.init(); 
+</script>
+    <script>
+    function showForm() {
+      document.getElementById('contact-form').style.display = 'block';
+    }
+    function hideForm() {
+      document.getElementById('contact-form').style.display = 'none';
     }
   </script>
 
