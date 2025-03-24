@@ -1,10 +1,11 @@
 // Function to show the contact form
 function showForm() {
+  console.log('showForm triggered'); // Debug log
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
     contactForm.style.display = 'block';
   } else {
-    console.error('Contact form element not found!');
+    console.error('Contact form not found');
   }
 }
 
@@ -16,4 +17,5 @@ function hideForm() {
   } else {
     console.error('Contact form element not found!');
   }
+}
 }
