@@ -14,14 +14,13 @@
             width: 100%; /* Stretch across the screen */
             height: 100vh; /* Full viewport height */
             background-color: black; /* Black background */
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
 
         .container {
-            position: relative;
-            width: fit-content;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: fit-content; /* Adjust to fit the images */
         }
 
         .image1 {
@@ -43,9 +42,8 @@
     <section class="intro-section">
         <div class="container">
             <img src="Picture Overlay.png" alt="Overlay" class="image1">
-            <img src="Kenny_Basic.jpg" alt="Background" class="image2">
+            <img src="Kenny_Basic.png" alt="Background" class="image2">
         </div>
     </section>
 </body>
 </html>
-
