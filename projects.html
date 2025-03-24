@@ -126,52 +126,6 @@ footer {
     }
 
 
-#contact-form { 
-    display: none; 
-    position: fixed; 
-    top: 50%; left: 50%; 
-    transform: 
-    translate(-50%, -50%); 
-    background: #f9f9f9; 
-    border: 1px solid #ccc; 
-    padding: 90px; 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-    width: 500px; 
-    max-width: 90%; }
-
-#contact-form h2 {
-  font-size: 1.5em;
-  margin-bottom: 20px; /* Adds space below the header */
-  text-align: center;
-}
-
-#contact-form input, #contact-form textarea {
-  width: 100%; /* Ensure fields stretch fully across the popup */
-  margin-bottom: 15px; /* Adjust space between fields */
-  padding: 10px; /* Maintain padding inside the fields */
-  border: 1px solid #ccc;
-  border-radius: 5px; /* Smooth corners for a polished look */
-}
-
-#contact-form button {
-  font-size: 1em;
-  margin-top: 15px; /* Adds space between buttons and fields */
-  padding: 10px 20px;
-  background-color: #333;
-  color: white;
-  border: 2px solid #ccc; /* Visible border */
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#contact-form button:hover {
-  background-color: #555; /* Slightly lighter hover effect */
-  border-color: #888; /* Subtle change on hover */
-}
-
-
-
-    
   </style>
 </head>
 <body>
@@ -190,20 +144,6 @@ footer {
     <input type="text" id="search-input" placeholder="Search by name, date, or keywords">
     <button onclick="filterWorks()">Search</button>
   </div>
-
-  <div id="contact-form" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1000; background: white; padding: 20px; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); width: 90%; max-width: 400px;">
-  <h2>Contact Me</h2>
-  <form action="https://getform.io/f/anlqyzla" method="POST">
-    <input type="text" name="name" placeholder="Name" required style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px;">
-    <input type="tel" name="phone" placeholder="Phone Number" required style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px;">
-    <input type="email" name="email" placeholder="Email" required style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px;">
-    <textarea name="summary" placeholder="Your Message" rows="4" required style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px;"></textarea>
-    <div style="display: flex; justify-content: space-between; margin-top: 10px;">
-      <button type="submit" style="padding: 15px 30px; font-size: 1.2em; background-color: #BF00FF; color: white; border: none; border-radius: 8px; cursor: pointer;">Send</button>
-      <button type="button" onclick="hideForm()" style="padding: 15px 30px; font-size: 1.2em; background-color: #333; color: white; border: none; border-radius: 8px; cursor: pointer;">Close</button>
-    </div>
-  </form>
-</div>
 
 <!-- Works Grid -->
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto" id="works-container">
