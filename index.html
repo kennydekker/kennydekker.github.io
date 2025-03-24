@@ -256,8 +256,7 @@ footer {
 
 
 
-  <!-- Contact Form -->
-<div id="contact-form" style="text-align: center; padding: 20px;">
+<div id="contact-form" style="display: none; text-align: center; padding: 20px;">
   <h2>Contact Me</h2>
   <form action="https://getform.io/f/anlqyzla" method="POST" style="display: inline-block; text-align: left; width: 100%; max-width: 400px;">
     <input type="text" name="name" placeholder="Name" required style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px;">
@@ -265,8 +264,10 @@ footer {
     <input type="email" name="email" placeholder="Email" required style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px;">
     <textarea name="summary" placeholder="Your Message" rows="4" required style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px;"></textarea>
     <button type="submit" class="contact-button" style="width: 100%; padding: 10px; background-color: #BF00FF; color: white; border: none; border-radius: 5px; cursor: pointer;">Send</button>
+    <button type="button" onclick="hideForm()" style="width: 100%; padding: 10px; margin-top: 10px; background-color: #333; color: white; border: none; border-radius: 5px; cursor: pointer;">Close</button>
   </form>
 </div>
+
 
 
 
