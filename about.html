@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Kenny Dekker</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4; /* Light gray background */
+      color: #333; /* Professional text color */
+      text-align: center;
+    }
+
+    /* Hotbar Navigation */
+    .hotbar {
+      background-color: #333;
+      overflow: hidden;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+
+    .hotbar a {
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      text-align: center;
+      cursor: pointer; /* Make the "Contact" clickable */
+    }
+
+    .hotbar a:hover {
+      background-color: #555;
+    }
+
+    /* About Section */
+    .about-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 1200px;
+      margin: 150px auto 50px; /* Adjust spacing to show hotbar clearly */
+      padding: 0 20px;
+    }
+
+    .about-section {
+      display: flex;
+      flex-wrap: wrap; /* Responsiveness for smaller screens */
+      align-items: center;
+      gap: 40px;
+    }
+
+    .about-photo img {
+      width: 200px;
+      height: auto;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Professional image shadow */
+    }
+
+    .about-summary {
+      max-width: 600px;
+      text-align: left; /* Align text for readability */
+    }
+
+    .about-summary h1 {
+      font-size: 2.5em;
+      color: #800020; /* Bold burgundy to stand out */
+      margin-bottom: 20px;
+    }
+
+    .about-summary p {
+      line-height: 1.6;
+      font-size: 1.1em;
+    }
+
+    /* Call-to-Action Button */
+    .cta-button {
+      font-size: 1.5em;
+      padding: 15px 30px;
+      background-color: #BF00FF; /* Electric purple for boldness */
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 30px;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .cta-button:hover {
+      background-color: #9F00CC; /* Hover effect */
+      transform: scale(1.1);
+    }
+
+    /* Contact Form */
+    #contact-form {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #f9f9f9;
+      border: 1px solid #ccc;
+      padding: 40px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 500px;
+      max-width: 90%;
+      z-index: 1000; /* Ensure it appears above other content */
+    }
+
+    #contact-form h2 {
+      font-size: 1.5em;
+      margin-bottom: 20px; /* Adds space below the header */
+      text-align: center;
+    }
+
+    #contact-form input, #contact-form textarea {
+      width: 100%; /* Ensure fields stretch fully across the popup */
+      margin-bottom: 15px; /* Adjust space between fields */
+      padding: 10px; /* Maintain padding inside the fields */
+      border: 1px solid #ccc;
+      border-radius: 5px; /* Smooth corners for a polished look */
+    }
+
+    #contact-form button {
+      font-size: 1em;
+      margin-top: 15px; /* Adds space between buttons and fields */
+      padding: 10px 20px;
+      background-color: #333;
+      color: white;
+      border: 2px solid #ccc; /* Visible border */
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #contact-form button:hover {
+      background-color: #555; /* Slightly lighter hover effect */
+      border-color: #888; /* Subtle change on hover */
+    }
+
+/* Footer Styles */
+/* Ensure the page takes up the full height */
+html, body {
+  height: 100%; /* Full height of viewport */
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  background: #333; /* Black background */
+  color: white; /* White text */
+  text-align: center;
+  padding: 20px;
+  height: 20vh; /* Adjust the height as needed */
+  margin-top: auto; /* Pushes footer to the bottom */
+  width: 100vw; /* Full width of the viewport */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center content */
+  align-items: center; /* Horizontally center content */
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+    .support-link {
+      color: forestgreen;
+      text-decoration: none;
+      font-size: 1em;
+      display: inline-flex;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .support-link:hover {
+      text-decoration: underline;
+    }
+
+    .support-link span {
+      margin-right: 5px; /* Space between the symbol and text */
+    }
+  </style>
+</head>
+<body>
+  <!-- Hotbar Navigation -->
+  <div class="hotbar">
+    <a href="index.html">Home</a>
+    <a onclick="showForm()">Contact</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">My Projects</a>
+  </div>
+
+  <!-- About Section -->
+  <div class="about-wrapper">
+    <div class="about-section">
+      <div class="about-photo">
+        <img src="kenny-profile.jpg" alt="Kenny Dekker">
+      </div>
+      <div class="about-summary">
+        <h1>Meet Kenny Dekker</h1>
+        <p>Kenny Dekker is a young, passionate web developer who loves bringing visions to life online. With a knack for crafting innovative websites, Kenny has been designing since the age of 12, steadily building up his skills and creating stunning user-focused experiences.</p>
+        <p>Starting his coding journey at just 11 years old, Kenny’s passion for web development quickly blossomed as he created websites for friends and community projects, showcasing creativity, responsiveness, and functionality. Today, Kenny specializes in turning ideas into reality with professional designs that leave a lasting impression.</p>
+        <p>From sleek portfolios to dynamic e-commerce platforms, Kenny’s work reflects modern trends, deep technical expertise, and a strong commitment to collaboration. Whether you're a start-up or an established business, Kenny’s fresh perspective and dedication ensure every project stands out.</p>
+        <p class="fun-fact">Fun fact: Kenny designed his first website on his family computer over a single weekend!</p>
+        <a href="projects.html">
+          <button class="cta-button">Discover Kenny's Projects</button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Form -->
+  <div id="contact-form">
+    <h2>Contact Me</h2>
+    <form action="mailto:kennydekker@mail.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="summary" placeholder="Summary" rows="4" required></textarea>
+      <button type="submit">Send</button>
+      <button type="button" onclick="hideForm()">Close</button>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Kenny Dekker. All Rights Reserved.</p>
+    <a href="#" class="support-link">
+      <span>🔥</span>Support my work
+    </a>
+  </footer>
+
+  <!-- JavaScript for Contact Form -->
+  <script>
+    function showForm() {
+      document.getElementById('contact-form').style.display = 'block';
+    }
+
+    function hideForm() {
+      document.getElementById('contact-form').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
