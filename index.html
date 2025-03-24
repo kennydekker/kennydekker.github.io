@@ -256,15 +256,17 @@ footer {
 
 
 
-<div id="contact-form" style="display: none; text-align: center; padding: 20px;">
+<div id="contact-form" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1000; background: white; padding: 20px; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); width: 90%; max-width: 400px;">
+  <!-- Close Button -->
+  <button onclick="hideForm()" style="position: absolute; top: 10px; right: 10px; background: none; border: none; font-size: 1.5em; cursor: pointer;">&times;</button>
+  
   <h2>Contact Me</h2>
-  <form action="https://getform.io/f/anlqyzla" method="POST" style="display: inline-block; text-align: left; width: 100%; max-width: 400px;">
+  <form action="https://getform.io/f/anlqyzla" method="POST" style="text-align: left;">
     <input type="text" name="name" placeholder="Name" required style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px;">
     <input type="tel" name="phone" placeholder="Phone Number" required style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px;">
     <input type="email" name="email" placeholder="Email" required style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px;">
     <textarea name="summary" placeholder="Your Message" rows="4" required style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px;"></textarea>
     <button type="submit" class="contact-button" style="width: 100%; padding: 10px; background-color: #BF00FF; color: white; border: none; border-radius: 5px; cursor: pointer;">Send</button>
-    <button type="button" onclick="hideForm()" style="width: 100%; padding: 10px; margin-top: 10px; background-color: #333; color: white; border: none; border-radius: 5px; cursor: pointer;">Close</button>
   </form>
 </div>
 
