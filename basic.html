@@ -1,114 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kenny's Website</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picture Overlay</title>
+    <style>
+        .container {
+            position: relative;
+            width: fit-content;
+        }
 
-    /* Hotbar Navigation */
-    .hotbar {
-      background-color: #333; /* Dark background */
-      overflow: hidden;
-      position: fixed; /* Sticks to the top */
-      top: 0; /* Aligns to the top of the viewport */
-      width: 100%; /* Full width */
-      display: flex;
-      justify-content: center;
-      padding: 10px 0; /* Adds spacing inside the hotbar */
-      z-index: 2; /* Ensures it stays above the background */
-    }
+        .image1,
+        .image2 {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
 
-    .hotbar a {
-      color: white; /* White text */
-      padding: 10px 20px; /* Adds padding around links */
-      text-decoration: none; /* No underline */
-      text-align: center;
-    }
-
-    .hotbar a:hover {
-      background-color: #555; /* Slightly lighter on hover */
-    }
-
-    /* Updated intro-section styling */
-    .intro-section {
-      position: relative; /* Ensures it does not overlap with other content */
-      margin-top: 60px; /* Pushes the section below the hotbar */
-      width: 100vw; /* Covers the full width of the viewport */
-      height: calc(100vh - 60px); /* Adjusts height to exclude hotbar */
-      background-image: url('Empty Left Overlay.png'); /* Background overlay image */
-      background-size: cover; /* Ensures the background scales to fit */
-      background-repeat: no-repeat; /* Prevents tiling */
-      background-position: center; /* Centers the overlay */
-      z-index: -1; /* Ensures it stays behind other content */
-    }
-
-    .intro-section img {
-      position: absolute; /* Enables precise positioning */
-      top: 50%; /* Centers image vertically */
-      left: 20%; /* Adjusts the horizontal position */
-      transform: translate(-50%, -50%); /* Smooth centering adjustment */
-      width: 220px; /* Adjust width for proper fit */
-      height: 220px; /* Match height with width */
-      border-radius: 50%; /* Keeps the image circular */
-      object-fit: cover; /* Ensures the image fills its container */
-    }
-
-    .intro-summary {
-      display: flex;
-      flex-direction: column; /* Stack summary text and button */
-      align-items: center; /* Center align text and button */
-      max-width: 500px; /* Constrain width of summary text */
-      line-height: 1.5; /* Add space between lines */
-    }
-
-    .intro-summary p {
-      text-align: left; /* Align the text to the left */
-    }
-
-    .contact-button {
-      font-size: 1.5em; /* Bold and professional font size */
-      padding: 15px 30px; /* Ample padding for prominence */
-      background-color: #BF00FF; /* Vibrant electric purple */
-      color: white; /* High contrast for clear readability */
-      border: 2px solid #BF00FF; /* Matching border for seamless design */
-      border-radius: 8px; /* Smooth, modern corners */
-      cursor: pointer;
-      margin-top: 30px; /* Generous spacing after the summary */
-      font-family: 'Arial', sans-serif; /* Clean and professional font */
-      transition: transform 0.3s, box-shadow 0.3s; /* Smooth interactive effects */
-    }
-
-    .contact-button:hover {
-      background-color: #9F00CC; /* Slightly darker electric purple on hover */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle yet bold shadow effect */
-      transform: scale(1.1); /* Noticeable zoom-in effect */
-    }
-  </style>
+        .image2 {
+            opacity: 0.5; /* Adjust transparency if needed */
+        }
+    </style>
 </head>
 <body>
-  <!-- Hotbar Navigation -->
-  <div class="hotbar">
-    <a href="index.html">Home</a>
-    <a onclick="showForm()">Contact</a>
-    <a href="about.html">About</a>
-    <a href="projects.html">My Projects</a>
-  </div>
-
-  <div class="intro-section">
-    <img src="Kenny_Basic.jpg" alt="Kenny's Photo">
-    <div class="intro-summary">
-      <h1 style="font-size: 2.5em; color: black; margin-bottom: 10px;">Hi! I'm <span style="color: blue;">Kenny Dekker</span>!</h1>
-      <p style="font-size: 1.2em; color: black;">I'm a professional software developer with over five years of experience in designing, developing, and optimizing websites for businesses of all sizes. I specialize in creating user-focused, responsive, and visually stunning websites that deliver measurable results.</p>
-      <button class="contact-button" onclick="showForm()">Contact Me</button>
+    <div class="container">
+        <img src="Picture Overlay.png" alt="Overlay" class="image1">
+        <img src="Kenny_Basic.jpg" alt="Transparent Base" class="image2">
     </div>
-  </div>
 </body>
 </html>
 
