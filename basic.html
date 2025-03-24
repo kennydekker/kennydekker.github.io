@@ -10,19 +10,25 @@
             width: fit-content;
         }
 
-        .image1,
+        .image1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2; /* Ensure this is on top */
+        }
+
         .image2 {
             position: absolute;
             top: 0;
             left: 0;
+            z-index: 1; /* Keep this below Picture 1 */
         }
     </style>
 </head>
 <body>
     <div class="container">
         <img src="Picture Overlay.png" alt="Overlay" class="image1">
-        <img src="Kenny_Basic.png" alt="Transparent Base" class="image2">
+        <img src="Kenny_Basic.jpg" alt="Background" class="image2">
     </div>
 </body>
 </html>
-
