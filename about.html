@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Works</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    /* Hotbar Navigation */
+    .hotbar {
+      background-color: #333; /* Dark background */
+      overflow: hidden;
+      position: fixed; /* Sticks to the top */
+      top: 0;
+      width: 100%; /* Full width */
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+
+    .hotbar a {
+      color: white; /* White text */
+      padding: 10px 20px;
+      text-decoration: none; /* No underline */
+      text-align: center;
+    }
+
+    .hotbar a:hover {
+      background-color: #555; /* Slightly lighter on hover */
+    }
+
+    /* Footer Styles */
+    html, body {
+      height: 100%; /* Full height of viewport */
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    footer {
+      background: #333; /* Black background */
+      color: white; /* White text */
+      text-align: center;
+      padding: 20px;
+      height: 20vh; /* Adjust the height as needed */
+      margin-top: auto; /* Pushes footer to the bottom */
+      width: 100vw; /* Full width of the viewport */
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* Vertically center content */
+      align-items: center; /* Horizontally center content */
+      box-sizing: border-box; /* Ensures padding doesn't affect width */
+    }
+    
+    .support-link {
+      color: forestgreen;
+      text-decoration: none;
+      font-size: 1em;
+      display: inline-flex;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .support-link:hover {
+      text-decoration: underline;
+    }
+
+    .support-link span {
+      margin-right: 5px; /* Space between the symbol and text */
+    }
+
+    /* Search Bar Styling */
+    #search-bar {
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    #search-bar input {
+      width: 60%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    #search-bar button {
+      padding: 10px 20px;
+      margin-left: 10px;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #search-bar button:hover {
+      background-color: #555;
+    }
+
+    /* Featured Works Item Styling */
+    .work-item {
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .work-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Add margin below works container */
+    #works-container {
+      margin-bottom: 40px; /* Adds spacing between articles and footer */
+    }
+  </style>
+</head>
+<body>
+  <!-- Hotbar Navigation -->
+  <div class="hotbar">
+    <a href="index.html">Home</a>
+    <a onclick="showForm()">Contact</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">My Projects</a>
+  </div>
+
+  <h1 class="text-3xl text-center mb-6">My Projects</h1>
+
+  <!-- Search Bar -->
+  <div id="search-bar">
+    <input type="text" id="search-input" placeholder="Search by name, date, or keywords">
+    <button onclick="filterWorks()">Search</button>
+  </div>
+
+  <!-- Works Grid -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto" id="works-container">
+
+    <!-- Sample Works (Add dynamically) -->
+    <div class="work-item featured-article p-6 bg-white border border-gray-300 rounded-lg shadow-md" data-keywords="redesign, usability, performance" data-name="E-Commerce Redesign" data-date="2023">
+      <img src="ecommerce.jpg" alt="E-Commerce Redesign" class="w-full h-48 object-cover rounded-t-md">
+      <h2 class="text-xl font-bold mt-4" style="color: black;">E-Commerce Redesign</h2>
+      <p class="text-gray-600" style="color: black;">A complete overhaul of a large online retailer's website.</p>
+    </div>
+
+    <div class="work-item featured-article p-6 bg-white border border-gray-300 rounded-lg shadow-md" data-keywords="portfolio, interactive, creative" data-name="Portfolio Site" data-date="2024">
+      <img src="portfolio.jpg" alt="Portfolio Site" class="w-full h-48 object-cover rounded-t-md">
+      <h2 class="text-xl font-bold mt-4" style="color: black;">Portfolio Site</h2>
+      <p class="text-gray-600" style="color: black;">Developed a portfolio platform for showcasing work.</p>
+    </div>
+
+    <div class="work-item featured-article p-6 bg-white border border-gray-300 rounded-lg shadow-md" data-keywords="responsive, mobile-first, design" data-name="Responsive Redesign" data-date="2022">
+      <img src="responsive.jpg" alt="Responsive Redesign" class="w-full h-48 object-cover rounded-t-md">
+      <h2 class="text-xl font-bold mt-4" style="color: black;">Responsive Redesign</h2>
+      <p class="text-gray-600" style="color: black;">Helped businesses improve mobile engagement.</p>
+    </div>
+
+  </div>
+  
+
+  <!-- Footer -->
+    </div>
+    <footer>
+      <p>&copy; 2025 Kenny Dekker. All Rights Reserved.</p>
+      <a href="https://www.patreon.com/" target="_blank" class="support-link">
+        <span>🔥</span>Support my work
+      </a>
+    </footer>
+
+  <script>
+    // Add event listener for the Enter key
+    document.getElementById('search-input').addEventListener('keypress', function (event) {
+      if (event.key === 'Enter') {
+        event.preventDefault(); // Prevent the form from submitting (optional)
+        filterWorks(); // Call the search function
+      }
+    });
+
+    // Function to filter works by name, date, or keywords
+    function filterWorks() {
+      const input = document.getElementById('search-input').value.toLowerCase();
+      const works = document.querySelectorAll('.work-item');
+
+      // Check if the input is empty
+      if (input.trim() === '') {
+        // Show all works if the input is empty
+        works.forEach(work => {
+          work.style.display = 'block';
+        });
+        return;
+      }
+
+      // Filter works by name, date, or keywords
+      works.forEach(work => {
+        const name = work.getAttribute('data-name').toLowerCase();
+        const date = work.getAttribute('data-date').toLowerCase();
+        const keywords = work.getAttribute('data-keywords').toLowerCase();
+
+        if (name.includes(input) || date.includes(input) || keywords.includes(input)) {
+          work.style.display = 'block';
+        } else {
+          work.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
