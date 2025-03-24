@@ -44,16 +44,32 @@
       padding: 0 20px; /* Add responsive padding */
     }
 
+    /* Updated intro-section styling */
     .intro-section {
-        display: flex;
-        align-items: flex-start; /* Align image with the header */
-        gap: 20px; /* Add spacing between the image and text */
-        
+      position: relative; /* Establishes relative positioning for the image and background */
+      display: flex;
+      align-items: center; /* Aligns content vertically */
+      justify-content: flex-start; /* Aligns content horizontally */
+      width: 100%;
+      background-image: url('Empty_Left_Overlay.png'); /* Background image with oval */
+      background-size: contain; /* Ensures the oval fits properly */
+      background-repeat: no-repeat; /* Prevents tiling */
+      background-position: left; /* Positions the oval to the left */
+      padding: 20px; /* Adds space inside the section */
+      height: 300px; /* Ensures space for the image */
     }
+
     .intro-section img {
-        align-self: flex-start; /* Keep the image aligned to the top */
-        
+      position: absolute; /* Absolute positioning to fit within the transparent oval */
+      top: 50%; /* Aligns image vertically */
+      left: 5%; /* Aligns image horizontally */
+      transform: translate(0, -50%); /* Ensures the image centers properly */
+      width: 220px; /* Adjust width for proper fit */
+      height: 220px; /* Match height with width */
+      border-radius: 50%; /* Ensures the image is circular */
+      object-fit: cover; /* Ensures the image fills its container */
     }
+
     .intro-summary {
       display: flex;
       flex-direction: column; /* Stack summary text and button */
@@ -66,168 +82,69 @@
       text-align: left; /* Align the text to the left */
     }
     
-.contact-button {
-  font-size: 1.5em; /* Bold and professional font size */
-  padding: 15px 30px; /* Ample padding for prominence */
-  background-color: #BF00FF; /* Vibrant electric purple */
-  color: white; /* High contrast for clear readability */
-  border: 2px solid #BF00FF; /* Matching border for seamless design */
-  border-radius: 8px; /* Smooth, modern corners */
-  cursor: pointer;
-  margin-top: 30px; /* Generous spacing after the summary */
-  font-family: 'Arial', sans-serif; /* Clean and professional font */
-  transition: transform 0.3s, box-shadow 0.3s; /* Smooth interactive effects */
-}
+    .contact-button {
+      font-size: 1.5em; /* Bold and professional font size */
+      padding: 15px 30px; /* Ample padding for prominence */
+      background-color: #BF00FF; /* Vibrant electric purple */
+      color: white; /* High contrast for clear readability */
+      border: 2px solid #BF00FF; /* Matching border for seamless design */
+      border-radius: 8px; /* Smooth, modern corners */
+      cursor: pointer;
+      margin-top: 30px; /* Generous spacing after the summary */
+      font-family: 'Arial', sans-serif; /* Clean and professional font */
+      transition: transform 0.3s, box-shadow 0.3s; /* Smooth interactive effects */
+    }
 
-.contact-button:hover {
-  background-color: #9F00CC; /* Slightly darker electric purple on hover */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle yet bold shadow effect */
-  transform: scale(1.1); /* Noticeable zoom-in effect */
-}
+    .contact-button:hover {
+      background-color: #9F00CC; /* Slightly darker electric purple on hover */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle yet bold shadow effect */
+      transform: scale(1.1); /* Noticeable zoom-in effect */
+    }
 
+    #contact-form { 
+      display: none; 
+      position: fixed; 
+      top: 50%; left: 50%; 
+      transform: translate(-50%, -50%); 
+      background: #f9f9f9; 
+      border: 1px solid #ccc; 
+      padding: 90px; 
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+      width: 500px; 
+      max-width: 90%; 
+    }
 
+    #contact-form h2 {
+      font-size: 1.5em;
+      margin-bottom: 20px; /* Adds space below the header */
+      text-align: center;
+    }
 
+    #contact-form input, #contact-form textarea {
+      width: 100%; /* Ensure fields stretch fully across the popup */
+      margin-bottom: 15px; /* Adjust space between fields */
+      padding: 10px; /* Maintain padding inside the fields */
+      border: 1px solid #ccc;
+      border-radius: 5px; /* Smooth corners for a polished look */
+    }
 
-#contact-form { 
-    display: none; 
-    position: fixed; 
-    top: 50%; left: 50%; 
-    transform: 
-    translate(-50%, -50%); 
-    background: #f9f9f9; 
-    border: 1px solid #ccc; 
-    padding: 90px; 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-    width: 500px; 
-    max-width: 90%; }
-
-#contact-form h2 {
-  font-size: 1.5em;
-  margin-bottom: 20px; /* Adds space below the header */
-  text-align: center;
-}
-
-#contact-form input, #contact-form textarea {
-  width: 100%; /* Ensure fields stretch fully across the popup */
-  margin-bottom: 15px; /* Adjust space between fields */
-  padding: 10px; /* Maintain padding inside the fields */
-  border: 1px solid #ccc;
-  border-radius: 5px; /* Smooth corners for a polished look */
-}
-
-#contact-form button {
-  font-size: 1em;
-  margin-top: 15px; /* Adds space between buttons and fields */
-  padding: 10px 20px;
-  background-color: #333;
-  color: white;
-  border: 2px solid #ccc; /* Visible border */
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#contact-form button:hover {
-  background-color: #555; /* Slightly lighter hover effect */
-  border-color: #888; /* Subtle change on hover */
-}
-
-
-/* Projects Section Styling */
-.projects-section {
-  padding: 90px 60px; /* Increased padding for a more spacious layout */
-  background: #121212; /* Professional dark background */
-  color: white;
-  text-align: center;
-}
-
-.projects-title {
-  font-family: 'Poppins', sans-serif;
-  font-size: 3em; /* Larger title font size */
-  letter-spacing: 2px; /* More spacing for emphasis */
-  margin-bottom: 50px; /* Increase space below the title */
-}
-
-/* Individual Box Styling */
-.box {
-  display: flex;
-  align-items: center;
-  margin: 30px auto; /* Increased spacing between boxes */
-  padding: 40px; /* Larger padding for a roomier box */
-  background: #222; /* Dark gray for premium feel */
-  border-radius: 15px; /* More rounded corners */
-  width: 85%; /* Increased width */
-  color: white;
-  text-decoration: none;
-  transition: background 0.3s, transform 0.3s;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
-}
-
-.box img {
-  width: 100px; /* Small image size */
-  height: 100px; /* Ensures uniform square dimensions */
-  object-fit: cover; /* Scales and crops the image to fill the box */
-  object-position: center top; /* Focuses on the top-center (where the face usually is) */
-  border-radius: 50%; /* Circular cropping for the images */
-  margin: 0 20px; /* Adjust spacing between image and text */
-}
-
-/* Left-aligned photo */
-.box:nth-child(even) {
-  flex-direction: row;
-}
-
-/* Right-aligned photo */
-.box:nth-child() {
-  flex-direction: row-reverse;
-}
-
-.box:hover {
-  background: #333; /* Slightly lighter gray on hover */
-  transform: scale(1.05); /* Enhanced growth effect */
-}
-/* Footer Styles */
-/* Ensure the page takes up the full height */
-html, body {
-  height: 100%; /* Full height of viewport */
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-footer {
-  background: #333; /* Black background */
-  color: white; /* White text */
-  text-align: center;
-  padding: 20px;
-  height: 20vh; /* Adjust the height as needed */
-  margin-top: auto; /* Pushes footer to the bottom */
-  width: 100vw; /* Full width of the viewport */
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Vertically center content */
-  align-items: center; /* Horizontally center content */
-  box-sizing: border-box; /* Ensures padding doesn't affect width */
-}
-
-    .support-link {
-      color: forestgreen;
-      text-decoration: none;
+    #contact-form button {
       font-size: 1em;
-      display: inline-flex;
-      align-items: center;
-      margin-top: 10px;
+      margin-top: 15px; /* Adds space between buttons and fields */
+      padding: 10px 20px;
+      background-color: #333;
+      color: white;
+      border: 2px solid #ccc; /* Visible border */
+      border-radius: 5px;
+      cursor: pointer;
     }
 
-    .support-link:hover {
-      text-decoration: underline;
-    }
-
-    .support-link span {
-      margin-right: 5px; /* Space between the symbol and text */
+    #contact-form button:hover {
+      background-color: #555; /* Slightly lighter hover effect */
+      border-color: #888; /* Subtle change on hover */
     }
   </style>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-
 </head>
 <body>
   <!-- Hotbar Navigation -->
@@ -238,21 +155,16 @@ footer {
     <a href="projects.html">My Projects</a>
   </div>
 
-<div class="intro-wrapper">
-  <div class="intro-section" style="display: flex; align-items: center;"> <!-- Flex container for proper alignment -->
-    <img src="Kenny.png" alt="Professional Photo" style="width: 250px; height: 250px; object-fit: cover; border-radius: 50%; margin-right: 20px;"> <!-- Larger circular photo -->
-    <div>
-      <h1 style="font-size: 2.5em; color: black; margin-bottom: 10px;">Hi! I'm <span style="color: blue;">Kenny Dekker</span>!</h1>
-      <p style="font-size: 1.2em; color: black;">I'm a professional software developer with over five years of experience in designing, developing, and optimizing websites for businesses of all sizes. I specialize in creating user-focused, responsive, and visually stunning websites that deliver measurable results.</p>
-      <div style="display: flex; justify-content: center; margin-top: 20px;"> <!-- Align button with the summary -->
+  <div class="intro-wrapper">
+    <div class="intro-section">
+      <img src="Kenny_Basic.png" alt="Kenny's Photo">
+      <div class="intro-summary">
+        <h1 style="font-size: 2.5em; color: black; margin-bottom: 10px;">Hi! I'm <span style="color: blue;">Kenny Dekker</span>!</h1>
+        <p style="font-size: 1.2em; color: black;">I'm a professional software developer with over five years of experience in designing, developing, and optimizing websites for businesses of all sizes. I specialize in creating user-focused, responsive, and visually stunning websites that deliver measurable results.</p>
         <button class="contact-button" onclick="showForm()">Contact Me</button>
       </div>
     </div>
   </div>
-</div>
-
-
-
 
 
 <div id="contact-form" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1000; background: white; padding: 20px; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); width: 90%; max-width: 400px;">
