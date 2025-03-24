@@ -8,7 +8,7 @@
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      padding: 20px;
+      padding: 0;
       text-align: center;
     }
 
@@ -22,6 +22,7 @@
       display: flex;
       justify-content: center;
       padding: 10px 0;
+      z-index: 2; /* Ensures it stays above the background */
     }
 
     .hotbar a {
@@ -35,31 +36,21 @@
       background-color: #555; /* Slightly lighter on hover */
     }
 
-    .intro-wrapper {
-      display: flex;
-      flex-direction: column; /* Stack elements vertically */
-      align-items: center; /* Center content horizontally */
-      margin: 150px auto; /* Add spacing from the top */
-      max-width: 800px; /* Limit the width of the section */
-      padding: 0 20px; /* Add responsive padding */
-    }
-
     /* Updated intro-section styling */
     .intro-section {
-      position: relative; /* Allows layering of the overlay and content */
-      display: flex;
-      align-items: center; /* Vertically align contents */
-      justify-content: flex-start; /* Horizontally align content */
-      width: 100%; /* Full width */
-      height: 300px; /* Ensures the section takes up the desired height */
-      background-image: url('Empty Left Overlay.png'); /* Background overlay image */
-      background-size: cover; /* Ensures the background fills the container */
+      position: absolute; /* Makes the section fill the page */
+      top: 0; /* Aligns to the top of the viewport */
+      left: 0; /* Aligns to the left of the viewport */
+      width: 100vw; /* Covers the full width of the viewport */
+      height: 100vh; /* Covers the full height of the viewport */
+      background-image: url('Empty_Left_Overlay.png'); /* Background overlay image */
+      background-size: cover; /* Ensures the background scales to fit */
       background-repeat: no-repeat; /* Prevents tiling */
       background-position: center; /* Centers the overlay */
+      z-index: -1; /* Ensures it stays behind other content */
     }
 
     .intro-section img {
-      z-index: 1; /* Ensures the image stays below the overlay */
       position: relative; /* Keeps the image properly positioned */
       width: 220px; /* Adjust width for proper fit */
       height: 220px; /* Match height with width */
@@ -98,49 +89,6 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle yet bold shadow effect */
       transform: scale(1.1); /* Noticeable zoom-in effect */
     }
-
-    #contact-form { 
-      display: none; 
-      position: fixed; 
-      top: 50%; left: 50%; 
-      transform: translate(-50%, -50%); 
-      background: #f9f9f9; 
-      border: 1px solid #ccc; 
-      padding: 90px; 
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-      width: 500px; 
-      max-width: 90%; 
-    }
-
-    #contact-form h2 {
-      font-size: 1.5em;
-      margin-bottom: 20px; /* Adds space below the header */
-      text-align: center;
-    }
-
-    #contact-form input, #contact-form textarea {
-      width: 100%; /* Ensure fields stretch fully across the popup */
-      margin-bottom: 15px; /* Adjust space between fields */
-      padding: 10px; /* Maintain padding inside the fields */
-      border: 1px solid #ccc;
-      border-radius: 5px; /* Smooth corners for a polished look */
-    }
-
-    #contact-form button {
-      font-size: 1em;
-      margin-top: 15px; /* Adds space between buttons and fields */
-      padding: 10px 20px;
-      background-color: #333;
-      color: white;
-      border: 2px solid #ccc; /* Visible border */
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    #contact-form button:hover {
-      background-color: #555; /* Slightly lighter hover effect */
-      border-color: #888; /* Subtle change on hover */
-    }
   </style>
 </head>
 <body>
@@ -152,14 +100,14 @@
     <a href="projects.html">My Projects</a>
   </div>
 
-  <div class="intro-wrapper">
-    <div class="intro-section">
-      <img src="Kenny_Basic.jpg" alt="Kenny's Photo">
-      <div class="intro-summary">
-
-        <button class="contact-button" onclick="showForm()">Contact Me</button>
-      </div>
+  <div class="intro-section">
+    <img src="Kenny_Basic.png" alt="Kenny's Photo">
+    <div class="intro-summary">
+      <h1 style="font-size: 2.5em; color: black; margin-bottom: 10px;">Hi! I'm <span style="color: blue;">Kenny Dekker</span>!</h1>
+      <p style="font-size: 1.2em; color: black;">I'm a professional software developer with over five years of experience in designing, developing, and optimizing websites for businesses of all sizes. I specialize in creating user-focused, responsive, and visually stunning websites that deliver measurable results.</p>
+      <button class="contact-button" onclick="showForm()">Contact Me</button>
     </div>
   </div>
 </body>
 </html>
+
